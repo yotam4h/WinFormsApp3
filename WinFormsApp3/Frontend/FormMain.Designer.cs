@@ -95,12 +95,20 @@
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AllowUserToOrderColumns = true;
+            dataGridView1.AllowUserToResizeRows = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = SystemColors.ControlLight;
+            dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(435, 3);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.ShowCellToolTips = false;
+            dataGridView1.ShowEditingIcon = false;
             dataGridView1.Size = new Size(426, 393);
             dataGridView1.TabIndex = 0;
             // 
@@ -159,6 +167,7 @@
             Name = "FormMain";
             Padding = new Padding(0, 64, 3, 3);
             Text = "Menu Manager";
+            Load += FormMain_Load;
             materialTabControl1.ResumeLayout(false);
             Home.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);

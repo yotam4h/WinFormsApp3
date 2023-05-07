@@ -46,5 +46,10 @@ namespace WinFormsApp3
 
             //FormClosing += new FormClosingEventHandler(MenuManager.SaveMenuItems);
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
