@@ -10,10 +10,10 @@ namespace WinFormsApp3.Backend.Enums
     {
         Espresso,
         DoubleEspresso,
-        Macchiato,
+        Americano,
+        Macchiato = 101,
         Cappuccino,
         Latte,
-        Americano,
         Mocha,
         HotChocolate,
         Tea
