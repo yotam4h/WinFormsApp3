@@ -33,6 +33,7 @@
             materialTabControl1 = new ReaLTaiizor.Controls.MaterialTabControl();
             Home = new TabPage();
             Food = new TabPage();
+            foodPanel = new TableLayoutPanel();
             Coffee = new TabPage();
             panel1 = new ReaLTaiizor.Controls.Panel();
             panel2 = new ReaLTaiizor.Controls.Panel();
@@ -106,6 +107,7 @@
             // 
             // Food
             // 
+            Food.Controls.Add(foodPanel);
             Food.ImageKey = "hamburger_24px.png";
             Food.Location = new Point(4, 31);
             Food.Name = "Food";
@@ -114,6 +116,20 @@
             Food.TabIndex = 1;
             Food.Text = "Add Food";
             Food.UseVisualStyleBackColor = true;
+            // 
+            // foodPanel
+            // 
+            foodPanel.ColumnCount = 2;
+            foodPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            foodPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            foodPanel.Dock = DockStyle.Fill;
+            foodPanel.Location = new Point(3, 3);
+            foodPanel.Name = "foodPanel";
+            foodPanel.RowCount = 1;
+            foodPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            foodPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            foodPanel.Size = new Size(488, 412);
+            foodPanel.TabIndex = 3;
             // 
             // Coffee
             // 
