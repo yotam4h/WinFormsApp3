@@ -45,7 +45,7 @@ namespace WinFormsApp3
             comboBoxCoffeeType.DataSource = Enum.GetValues(typeof(ECoffee));
             comboBoxMilkType.DataSource = Enum.GetValues(typeof(EMilk));
             comboBoxSoftDrink.DataSource = Enum.GetValues(typeof(ESoftDrink));
-            comboBoxSoftDrinkSize.DataSource = Enum.GetValues(typeof(ESodaSize));
+            comboBoxSoftDrinkSize.DataSource = Enum.GetValues(typeof(ESize));
 
 
 
@@ -91,10 +91,9 @@ namespace WinFormsApp3
                 decimal price = decimal.Parse(maskedTextBoxPrice.Text);
                 var coffeeType = comboBoxCoffeeType.SelectedItem.ToString();
                 var milkType = comboBoxMilkType.SelectedItem.ToString();
-                bool ice = switchCoffeeIce.Checked;
                 bool decaf = switchDecaf.Checked;
 
-                var item = new Coffee(coffeeType, price, ice, milkType, decaf);
+                var item = new Coffee(coffeeType, price, ESize.Large, milkType, decaf); // FIX THISSSSSSSSSSSSSSS size
                 MenuManager.AddMenuItem(item);
                 dataGridViewMain.DataSource = MenuManager.GetMenuItemsByChild<Coffee>();
                 MaterialSnackBar AddedItemMessage = new("Item Added!");

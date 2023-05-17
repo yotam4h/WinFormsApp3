@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace WinFormsApp3.Backend.Enums
 {
-    public enum ESodaSize
+    public enum EMeatType
     {
-        Small = 250,
-        Medium = 330,
-        Large = 500
+        Beef,
+        Sheep,
+        Pig,
+        Chicken,
+        Horse
     }
 }

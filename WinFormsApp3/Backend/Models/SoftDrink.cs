@@ -11,9 +11,8 @@ namespace WinFormsApp3.Backend.Models
     public class SoftDrink : Drink
     {
         public bool IsCarbonated { get; set; }
-        public ESodaSize Size { get; set; }
         
-        public SoftDrink(string name, decimal price, bool haveIce, bool isCarbonated, ESodaSize size) : base(name, price, haveIce)
+        public SoftDrink(string name, decimal price, bool isCarbonated, ESize size) : base(name, price, size)
         {
             IsCarbonated = isCarbonated;
             Size = size;

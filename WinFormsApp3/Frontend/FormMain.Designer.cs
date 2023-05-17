@@ -33,6 +33,10 @@
             materialTabControl1 = new ReaLTaiizor.Controls.MaterialTabControl();
             Home = new TabPage();
             Food = new TabPage();
+            tableLayoutPanel3 = new TableLayoutPanel();
+            panel3 = new ReaLTaiizor.Controls.Panel();
+            materialSwitch1 = new ReaLTaiizor.Controls.MaterialSwitch();
+            materialLabel1 = new ReaLTaiizor.Controls.MaterialLabel();
             Coffee = new TabPage();
             panel1 = new ReaLTaiizor.Controls.Panel();
             panel2 = new ReaLTaiizor.Controls.Panel();
@@ -57,6 +61,9 @@
             maskedTextBoxPrice = new ReaLTaiizor.Controls.MaterialMaskedTextBox();
             buttonClear = new ReaLTaiizor.Controls.MaterialButton();
             materialTabControl1.SuspendLayout();
+            Food.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
+            panel3.SuspendLayout();
             Coffee.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -106,6 +113,7 @@
             // 
             // Food
             // 
+            Food.Controls.Add(tableLayoutPanel3);
             Food.ImageKey = "hamburger_24px.png";
             Food.Location = new Point(4, 31);
             Food.Name = "Food";
@@ -114,6 +122,63 @@
             Food.TabIndex = 1;
             Food.Text = "Add Food";
             Food.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel3
+            // 
+            tableLayoutPanel3.ColumnCount = 1;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.Controls.Add(panel3, 0, 0);
+            tableLayoutPanel3.Dock = DockStyle.Fill;
+            tableLayoutPanel3.Location = new Point(3, 3);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 2;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.Size = new Size(488, 412);
+            tableLayoutPanel3.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(39, 51, 63);
+            panel3.Controls.Add(materialSwitch1);
+            panel3.Controls.Add(materialLabel1);
+            panel3.Dock = DockStyle.Fill;
+            panel3.EdgeColor = Color.FromArgb(32, 41, 50);
+            panel3.Location = new Point(3, 3);
+            panel3.Name = "panel3";
+            panel3.Padding = new Padding(5);
+            panel3.Size = new Size(482, 200);
+            panel3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            panel3.TabIndex = 1;
+            panel3.Text = "panel3";
+            // 
+            // materialSwitch1
+            // 
+            materialSwitch1.AutoSize = true;
+            materialSwitch1.Depth = 0;
+            materialSwitch1.Location = new Point(8, 41);
+            materialSwitch1.Margin = new Padding(0);
+            materialSwitch1.MouseLocation = new Point(-1, -1);
+            materialSwitch1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialSwitch1.Name = "materialSwitch1";
+            materialSwitch1.Ripple = true;
+            materialSwitch1.Size = new Size(173, 37);
+            materialSwitch1.TabIndex = 1;
+            materialSwitch1.Text = "materialSwitch1";
+            materialSwitch1.UseAccentColor = false;
+            materialSwitch1.UseVisualStyleBackColor = true;
+            // 
+            // materialLabel1
+            // 
+            materialLabel1.AutoSize = true;
+            materialLabel1.Depth = 0;
+            materialLabel1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel1.Location = new Point(8, 5);
+            materialLabel1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialLabel1.Name = "materialLabel1";
+            materialLabel1.Size = new Size(102, 19);
+            materialLabel1.TabIndex = 0;
+            materialLabel1.Text = "Free Toppings";
             // 
             // Coffee
             // 
@@ -526,7 +591,6 @@
             maskedTextBoxPrice.TrailingIcon = null;
             maskedTextBoxPrice.UseSystemPasswordChar = false;
             maskedTextBoxPrice.ValidatingType = null;
-            maskedTextBoxPrice.Validating += maskedTextBoxPrice_Validating;
             // 
             // buttonClear
             // 
@@ -565,6 +629,10 @@
             Text = "Menu Manager";
             Load += FormMain_Load;
             materialTabControl1.ResumeLayout(false);
+            Food.ResumeLayout(false);
+            tableLayoutPanel3.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             Coffee.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
@@ -612,5 +680,8 @@
         private TableLayoutPanel tableLayoutPanel2;
         private ReaLTaiizor.Controls.MaterialButton buttonClear;
         private ReaLTaiizor.Controls.MaterialMaskedTextBox maskedTextBoxPrice;
+        private TableLayoutPanel tableLayoutPanel3;
+        private ReaLTaiizor.Controls.MaterialLabel materialLabel1;
+        private ReaLTaiizor.Controls.MaterialSwitch materialSwitch1;
     }
 }
