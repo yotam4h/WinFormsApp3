@@ -197,36 +197,44 @@ namespace WinFormsApp3
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
-            using (PdfWriter writer = new PdfWriter("C:\\Users\\Yotam\\Desktop\\test.pdf"))
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();
+            saveFileDialog1.Filter = "PDF files (*.pdf) |*.pdf";
+            saveFileDialog1.FilterIndex = 1;
+            saveFileDialog1.RestoreDirectory = true;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                using (PdfDocument PdfDoc = new PdfDocument(writer))
+                using (PdfWriter writer = new PdfWriter(saveFileDialog1.FileName))
                 {
-                    using (Document doc = new Document(PdfDoc))
+                    using (PdfDocument PdfDoc = new PdfDocument(writer))
                     {
-                        Paragraph header = new Paragraph("Menu");
-                        header.SetBold();
-                        header.SetUnderline();
-                        header.SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER);
-                        doc.Add(header);
-
-                        Paragraph burgerhead = new Paragraph("Burgers");
-                        burgerhead.SetBold();
-                        burgerhead.SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER);
-                        doc.Add(burgerhead);
-
-                        foreach (var item in MenuManager.GetMenuItemsByChild<Burger>())
+                        using (Document doc = new Document(PdfDoc))
                         {
-                            Paragraph burger = new Paragraph(item.ToString());
-                            burger.SetFontSize(10);
-                            doc.Add(burger);
-                        }
+                            Paragraph header = new Paragraph("Menu");
+                            header.SetBold();
+                            header.SetUnderline();
+                            header.SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER);
+                            doc.Add(header);
 
+                            Paragraph burgerhead = new Paragraph("Burgers");
+                            burgerhead.SetBold();
+                            burgerhead.SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER);
+                            doc.Add(burgerhead);
+
+                            foreach (var item in MenuManager.GetMenuItemsByChild<Burger>())
+                            {
+                                Paragraph burger = new Paragraph(item.ToString());
+                                burger.SetFontSize(10);
+                                doc.Add(burger);
+                            }
+
+                        }
                     }
                 }
-            }
 
-            MaterialSnackBar SnackBarMessage = new("PDF Created!");
-            SnackBarMessage.Show(this);
+                MaterialSnackBar SnackBarMessage = new("PDF Created!");
+                SnackBarMessage.Show(this);
+            }
         }
     }
 }
