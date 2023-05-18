@@ -52,14 +52,21 @@ namespace WinFormsApp3.Backend.Models
         public override string ToString()
         {
             string customToppings = "";
-            foreach (var item in CustomToppings)
+                foreach (var item in CustomToppings)
+                {
+                        customToppings += item + ", ";   
+                }
+
+            // Remove the last comma
+            if (customToppings.Length > 2)
             {
-                customToppings += item + ", ";
+                customToppings = customToppings.Remove(customToppings.Length - 2);
             }
+
             string freeToppings = "";
             if (Tomato)
             {
-                freeToppings += "Tomatoe, ";
+                freeToppings += "Tomato, ";
             }
             if (Lettuce)
             {
@@ -72,6 +79,11 @@ namespace WinFormsApp3.Backend.Models
             if (Pickle)
             {
                 freeToppings += "Pickle, ";
+            }
+            // Remove the last comma
+            if (freeToppings.Length > 2)
+            {
+                freeToppings = freeToppings.Remove(freeToppings.Length - 2);
             }
             return $"{Name} - {freeToppings} - {customToppings} - {Price:C}";
 

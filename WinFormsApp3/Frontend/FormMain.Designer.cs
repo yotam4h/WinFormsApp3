@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             materialTabControl1 = new ReaLTaiizor.Controls.MaterialTabControl();
             Home = new TabPage();
+            materialButton1 = new ReaLTaiizor.Controls.MaterialButton();
             Food = new TabPage();
             tableLayoutPanel3 = new TableLayoutPanel();
             panel7 = new ReaLTaiizor.Controls.Panel();
@@ -75,6 +76,7 @@
             materialCheckBox3 = new ReaLTaiizor.Controls.MaterialCheckBox();
             materialCheckBox4 = new ReaLTaiizor.Controls.MaterialCheckBox();
             materialTabControl1.SuspendLayout();
+            Home.SuspendLayout();
             Food.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             panel7.SuspendLayout();
@@ -120,6 +122,7 @@
             // 
             // Home
             // 
+            Home.Controls.Add(materialButton1);
             Home.ImageKey = "home_page_24px.png";
             Home.Location = new Point(4, 31);
             Home.Name = "Home";
@@ -128,6 +131,27 @@
             Home.TabIndex = 0;
             Home.Text = "Home";
             Home.UseVisualStyleBackColor = true;
+            // 
+            // materialButton1
+            // 
+            materialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton1.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton1.Depth = 0;
+            materialButton1.HighEmphasis = true;
+            materialButton1.Icon = null;
+            materialButton1.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            materialButton1.Location = new Point(7, 373);
+            materialButton1.Margin = new Padding(4, 6, 4, 6);
+            materialButton1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialButton1.Name = "materialButton1";
+            materialButton1.NoAccentTextColor = Color.Empty;
+            materialButton1.Size = new Size(158, 36);
+            materialButton1.TabIndex = 0;
+            materialButton1.Text = "materialButton1";
+            materialButton1.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton1.UseAccentColor = false;
+            materialButton1.UseVisualStyleBackColor = true;
+            materialButton1.Click += materialButton1_Click;
             // 
             // Food
             // 
@@ -960,6 +984,8 @@
             FormClosing += FormMain_FormClosing;
             Load += FormMain_Load;
             materialTabControl1.ResumeLayout(false);
+            Home.ResumeLayout(false);
+            Home.PerformLayout();
             Food.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
             panel7.ResumeLayout(false);
@@ -1031,5 +1057,6 @@
         private ReaLTaiizor.Controls.Panel panel10;
         private ReaLTaiizor.Controls.MaterialMaskedTextBox maskedTextBoxName;
         private BindingSource menuManagerBindingSource;
+        private ReaLTaiizor.Controls.MaterialButton materialButton1;
     }
 }

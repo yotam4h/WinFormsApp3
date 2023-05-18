@@ -1,3 +1,6 @@
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
 using Org.BouncyCastle.Asn1.X9;
 using ReaLTaiizor.Colors;
 using ReaLTaiizor.Controls;
@@ -49,6 +52,8 @@ namespace WinFormsApp3
             buttonAdd.Hide();
             maskedTextBoxPrice.Hide();
             MenuManager.LoadMenuItems();
+
+
             dataGridViewMain.DataSource = MenuManager.GetMenuItems();
             comboBoxCoffeeType.DataSource = Enum.GetValues(typeof(ECoffee));
             comboBoxMilkType.DataSource = Enum.GetValues(typeof(EMilk));
@@ -128,9 +133,9 @@ namespace WinFormsApp3
                 if (checkBoxTomato.Checked) { item.Tomato = true; }
                 if (checkBoxOnion.Checked) { item.Onion = true; }
                 if (checkBoxPickle.Checked) { item.Pickle = true; }
-                if (customTopping1.Text.Length > 0) { item.CustomToppings.Add(customTopping1.Text); }
-                if (customTopping2.Text.Length > 0) { item.CustomToppings.Add(customTopping2.Text); }
-                if (customTopping3.Text.Length > 0) { item.CustomToppings.Add(customTopping3.Text); }
+                if (customTopping1.Text.Length > 1) { item.CustomToppings.Add(customTopping1.Text); }
+                if (customTopping2.Text.Length > 1) { item.CustomToppings.Add(customTopping2.Text); }
+                if (customTopping3.Text.Length > 1) { item.CustomToppings.Add(customTopping3.Text); }
 
                 MenuManager.AddMenuItem(item);
                 dataGridViewMain.DataSource = MenuManager.GetMenuItemsByChild<Burger>();
@@ -188,6 +193,40 @@ namespace WinFormsApp3
                 SnackBarMessage.Show(this);
                 e.Cancel = true;
             }
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            using (PdfWriter writer = new PdfWriter("C:\\Users\\Yotam\\Desktop\\test.pdf"))
+            {
+                using (PdfDocument PdfDoc = new PdfDocument(writer))
+                {
+                    using (Document doc = new Document(PdfDoc))
+                    {
+                        Paragraph header = new Paragraph("Menu");
+                        header.SetBold();
+                        header.SetUnderline();
+                        header.SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER);
+                        doc.Add(header);
+
+                        Paragraph burgerhead = new Paragraph("Burgers");
+                        burgerhead.SetBold();
+                        burgerhead.SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER);
+                        doc.Add(burgerhead);
+
+                        foreach (var item in MenuManager.GetMenuItemsByChild<Burger>())
+                        {
+                            Paragraph burger = new Paragraph(item.ToString());
+                            burger.SetFontSize(10);
+                            doc.Add(burger);
+                        }
+
+                    }
+                }
+            }
+
+            MaterialSnackBar SnackBarMessage = new("PDF Created!");
+            SnackBarMessage.Show(this);
         }
     }
 }
