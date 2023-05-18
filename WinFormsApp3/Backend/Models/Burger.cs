@@ -13,32 +13,32 @@ namespace WinFormsApp3.Backend.Models
     public class Burger : MenuItem
     {
         // Free toppings
-        public bool Tomatoe { get; set; }
+        public bool Tomato { get; set; }
         public bool Lettuce { get; set; }
         public bool Onion { get; set; }
         public bool Pickle { get; set; }
         // Paid toppings
-        public BindingList<(string topping, decimal price)> PaidToppings { get; set; }
+        public BindingList<string> CustomToppings { get; set; }
         // Meat Type
-        public EMeatType MeatType { get; set; }
+        public string ?MeatType { get; set; }
 
         public Burger(string name, decimal price) : base(name, price)
         {
-            PaidToppings = new BindingList<(string topping, decimal price)>();
+            CustomToppings = new BindingList<string>();
         }
 
-        public void AddTopping(string topping, decimal price)
+        public void AddTopping(string topping)
         {
-            PaidToppings.Add((topping, price));
+            CustomToppings.Add(topping);
         }
 
         public void RemoveTopping(string topping)
         {
-            foreach (var item in PaidToppings)
+            foreach (var item in CustomToppings)
             {
-                if (item.topping == topping)
+                if (item == topping)
                 {
-                    PaidToppings.Remove(item);
+                    CustomToppings.Remove(item);
                     break;
                 }
             }
@@ -46,22 +46,18 @@ namespace WinFormsApp3.Backend.Models
 
         public override decimal ComputePrice()
         {
-            foreach (var item in PaidToppings)
-            {
-                Price += item.price;
-            }
             return Price;
         }
 
         public override string ToString()
         {
-            string paidtoppings = "";
-            foreach (var item in PaidToppings)
+            string customToppings = "";
+            foreach (var item in CustomToppings)
             {
-                paidtoppings += item.topping + ", ";
+                customToppings += item + ", ";
             }
             string freeToppings = "";
-            if (Tomatoe)
+            if (Tomato)
             {
                 freeToppings += "Tomatoe, ";
             }
@@ -77,7 +73,7 @@ namespace WinFormsApp3.Backend.Models
             {
                 freeToppings += "Pickle, ";
             }
-            return $"{Name} - {freeToppings} - {paidtoppings} - {Price:C}";
+            return $"{Name} - {freeToppings} - {customToppings} - {Price:C}";
 
         }
 

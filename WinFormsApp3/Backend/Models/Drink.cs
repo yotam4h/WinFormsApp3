@@ -10,9 +10,9 @@ namespace WinFormsApp3.Backend.Models
     [Serializable]
     public abstract class Drink : MenuItem
     {
-        public ESize Size { get; set; }
+        public string Size { get; set; }
 
-        protected Drink(string name, decimal price, ESize size) : base(name, price)
+        protected Drink(string name, decimal price, string size) : base(name, price)
         {
             Size = size;
         }

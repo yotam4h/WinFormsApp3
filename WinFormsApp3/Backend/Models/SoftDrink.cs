@@ -12,15 +12,19 @@ namespace WinFormsApp3.Backend.Models
     {
         public bool IsCarbonated { get; set; }
         
-        public SoftDrink(string name, decimal price, bool isCarbonated, ESize size) : base(name, price, size)
+        public SoftDrink(string name, decimal price, bool isCarbonated, string size) : base(name, price, size)
         {
             IsCarbonated = isCarbonated;
-            Size = size;
         }
 
         public override decimal ComputePrice()
         {
             return Price;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + " " + IsCarbonated;
         }
     }
 }

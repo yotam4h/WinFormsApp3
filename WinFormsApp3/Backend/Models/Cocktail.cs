@@ -11,9 +11,9 @@ namespace WinFormsApp3.Backend.Models
     public class Cocktail : Drink
     {
         // add cocktail ingredients
-        public EAlcohol Alcohol { get; set; }
+        public string Alcohol { get; set; }
 
-        Cocktail(string name, decimal price, ESize size, EAlcohol alcohol) : base(name, price, size)
+        Cocktail(string name, decimal price, string size, string alcohol) : base(name, price, size)
         {
             Alcohol = alcohol;
         }
@@ -22,9 +22,9 @@ namespace WinFormsApp3.Backend.Models
         {
             Price *= Size switch
             {
-                ESize.Small => 1m,
-                ESize.Medium => 1.5m,
-                ESize.Large => 2m,
+                "Small" => 1m,
+                "Medium" => 1.5m,
+                "Large" => 2m,
                 _ => throw new Exception("Invalid size"),
             };
             return Price;

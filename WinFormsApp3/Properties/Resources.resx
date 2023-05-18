@@ -117,4 +117,446 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="banana-split-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banana-split-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="banana-split-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banana-split-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="banana-split-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banana-split-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="banknotes-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banknotes-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="banknotes-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banknotes-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="banknotes-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banknotes-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="beer-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beer-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="beer-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beer-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="beer-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beer-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bottle-of-water-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bottle-of-water-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bottle-of-water-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bottle-of-water-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bottle-of-water-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bottle-of-water-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brand-new-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brand-new-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brand-new-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brand-new-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brand-new-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brand-new-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bubble-tea-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bubble-tea-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bubble-tea-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bubble-tea-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bubble-tea-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bubble-tea-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cafe-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cafe-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cafe-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cafe-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cafe-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cafe-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calories-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calories-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calories-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calories-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calories-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calories-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cash-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cash-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cash-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cash-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cash-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cash-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cheesecake-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cheesecake-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cheesecake-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cheesecake-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cheesecake-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cheesecake-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cheque-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cheque-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cheque-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cheque-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cheque-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cheque-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chicken-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chicken-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chicken-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chicken-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chicken-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chicken-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chili-pepper-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chili-pepper-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chili-pepper-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chili-pepper-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chili-pepper-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chili-pepper-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cocktail-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cocktail-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cocktail-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cocktail-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cocktail-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cocktail-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cola-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cola-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cola-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cola-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cola-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cola-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cow-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cow-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cow-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cow-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cow-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cow-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="duck-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\duck-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="duck-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\duck-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="duck-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\duck-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eggs-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eggs-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eggs-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eggs-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eggs-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eggs-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fat-man-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fat-man-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fat-man-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fat-man-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fat-man-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fat-man-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="french-fries-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\french-fries-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="french-fries-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\french-fries-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="french-fries-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\french-fries-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="french-press-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\french-press-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="french-press-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\french-press-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="french-press-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\french-press-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fried-chicken-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fried-chicken-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fried-chicken-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fried-chicken-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fried-chicken-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fried-chicken-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hamburger-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hamburger-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hamburger-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hamburger-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hamburger-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hamburger-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="horse-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\horse-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="horse-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\horse-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="horse-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\horse-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hot-dog-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hot-dog-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hot-dog-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hot-dog-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hot-dog-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hot-dog-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ice-cream-sundae-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ice-cream-sundae-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ice-cream-sundae-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ice-cream-sundae-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ice-cream-sundae-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ice-cream-sundae-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lamb-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lamb-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lamb-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lamb-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lamb-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lamb-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lettuce-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lettuce-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lettuce-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lettuce-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lettuce-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lettuce-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maple-syrup-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maple-syrup-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maple-syrup-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maple-syrup-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maple-syrup-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maple-syrup-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="milkshake-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\milkshake-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="milkshake-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\milkshake-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="milkshake-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\milkshake-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="moka-pot-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\moka-pot-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="moka-pot-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\moka-pot-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="moka-pot-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\moka-pot-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="money-bag-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\money-bag-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="money-bag-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\money-bag-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="money-bag-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\money-bag-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mushroom-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mushroom-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mushroom-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mushroom-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mushroom-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mushroom-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nachos-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nachos-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nachos-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nachos-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nachos-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nachos-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="natural-food-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\natural-food-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="natural-food-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\natural-food-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="natural-food-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\natural-food-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="no-gluten-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\no-gluten-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="no-gluten-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\no-gluten-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="no-gluten-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\no-gluten-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="onion-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\onion-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="onion-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\onion-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="onion-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\onion-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orange-juice-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orange-juice-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orange-juice-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orange-juice-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orange-juice-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orange-juice-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="penguin-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\penguin-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="penguin-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\penguin-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="penguin-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\penguin-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pig-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pig-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pig-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pig-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pig-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pig-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pineapple-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pineapple-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pineapple-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pineapple-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pineapple-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pineapple-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="prawn-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\prawn-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="prawn-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\prawn-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="prawn-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\prawn-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="salad-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salad-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="salad-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salad-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="salad-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salad-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sheep-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sheep-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sheep-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sheep-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sheep-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sheep-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soda-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soda-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soda-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soda-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soda-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soda-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tea-cup-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tea-cup-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tea-cup-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tea-cup-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tea-cup-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tea-cup-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tomato-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tomato-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tomato-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tomato-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tomato-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tomato-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vegetarian-mark-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vegetarian-mark-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vegetarian-mark-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vegetarian-mark-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vegetarian-mark-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vegetarian-mark-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wine-glass-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wine-glass-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wine-glass-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wine-glass-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wine-glass-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wine-glass-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

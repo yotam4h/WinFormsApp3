@@ -33,14 +33,20 @@ namespace WinFormsApp3.Backend
             return menuItems;
         }
 
-        public static void SaveMenuItems(object sender, FormClosingEventArgs e)
+        public static void SaveMenuItems()
         {
-            throw new NotImplementedException();
+            var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+            Stream stream = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            binaryFormatter.Serialize(stream, MenuManager.GetMenuItems());
+            stream.Close();
         }
 
-        public static void RestoreMenuItems()
+        public static void LoadMenuItems()
         {
-            throw new NotImplementedException();
+            Stream stream = File.Open("MyFile.bin", FileMode.Open);
+            var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+            menuItems = (BindingList<MenuItem>)binaryFormatter.Deserialize(stream);
+            stream.Close();
         }
 
         public static void ClearMenuItems()

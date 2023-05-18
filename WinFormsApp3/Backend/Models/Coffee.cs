@@ -14,7 +14,7 @@ namespace WinFormsApp3.Backend.Models
         public string Milk { get; set; }
         public bool Decaf { get; set; }
 
-        public Coffee(string name, decimal price,ESize size, string milk, bool decaf) : base(name, price,size)
+        public Coffee(string name, decimal price,string size, string milk, bool decaf) : base(name, price ,size)
         {
             Milk = milk;
             Decaf = decaf;
@@ -23,6 +23,11 @@ namespace WinFormsApp3.Backend.Models
         public override decimal ComputePrice()
         {
             return Price;
-        }        
+        }     
+        
+        public override string ToString()
+        {
+            return base.ToString() + " " + Milk + " " + Decaf;
+        }
     }
 }

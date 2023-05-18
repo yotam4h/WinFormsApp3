@@ -34,9 +34,19 @@
             Home = new TabPage();
             Food = new TabPage();
             tableLayoutPanel3 = new TableLayoutPanel();
+            panel7 = new ReaLTaiizor.Controls.Panel();
+            customTopping3 = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            customTopping2 = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            customTopping1 = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             panel3 = new ReaLTaiizor.Controls.Panel();
-            materialSwitch1 = new ReaLTaiizor.Controls.MaterialSwitch();
-            materialLabel1 = new ReaLTaiizor.Controls.MaterialLabel();
+            checkBoxPickle = new ReaLTaiizor.Controls.MaterialCheckBox();
+            checkBoxOnion = new ReaLTaiizor.Controls.MaterialCheckBox();
+            checkBoxLettuce = new ReaLTaiizor.Controls.MaterialCheckBox();
+            checkBoxTomato = new ReaLTaiizor.Controls.MaterialCheckBox();
+            panel9 = new ReaLTaiizor.Controls.Panel();
+            comboBoxMeat = new ReaLTaiizor.Controls.MaterialComboBox();
+            panel10 = new ReaLTaiizor.Controls.Panel();
+            maskedTextBoxName = new ReaLTaiizor.Controls.MaterialMaskedTextBox();
             Coffee = new TabPage();
             panel1 = new ReaLTaiizor.Controls.Panel();
             panel2 = new ReaLTaiizor.Controls.Panel();
@@ -54,16 +64,23 @@
             menuIcons = new ImageList(components);
             buttonAdd = new ReaLTaiizor.Controls.MaterialButton();
             dataGridViewMain = new DataGridView();
+            menuManagerBindingSource = new BindingSource(components);
             panel4 = new ReaLTaiizor.Controls.Panel();
             panel5 = new ReaLTaiizor.Controls.Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             maskedTextBoxPrice = new ReaLTaiizor.Controls.MaterialMaskedTextBox();
             buttonClear = new ReaLTaiizor.Controls.MaterialButton();
+            materialCheckBox2 = new ReaLTaiizor.Controls.MaterialCheckBox();
+            materialCheckBox3 = new ReaLTaiizor.Controls.MaterialCheckBox();
+            materialCheckBox4 = new ReaLTaiizor.Controls.MaterialCheckBox();
             materialTabControl1.SuspendLayout();
             Food.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
+            panel7.SuspendLayout();
             panel3.SuspendLayout();
+            panel9.SuspendLayout();
+            panel10.SuspendLayout();
             Coffee.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -71,6 +88,7 @@
             panel6.SuspendLayout();
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewMain).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)menuManagerBindingSource).BeginInit();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -120,65 +138,323 @@
             Food.Padding = new Padding(3);
             Food.Size = new Size(494, 418);
             Food.TabIndex = 1;
-            Food.Text = "Add Food";
+            Food.Text = "Add Burger";
             Food.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel3
             // 
             tableLayoutPanel3.ColumnCount = 1;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.Controls.Add(panel3, 0, 0);
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel3.Controls.Add(panel7, 0, 3);
+            tableLayoutPanel3.Controls.Add(panel3, 0, 2);
+            tableLayoutPanel3.Controls.Add(panel9, 0, 1);
+            tableLayoutPanel3.Controls.Add(panel10, 0, 0);
             tableLayoutPanel3.Dock = DockStyle.Fill;
             tableLayoutPanel3.Location = new Point(3, 3);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 2;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.RowCount = 4;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 65F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 65F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 90F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle());
             tableLayoutPanel3.Size = new Size(488, 412);
             tableLayoutPanel3.TabIndex = 0;
             // 
+            // panel7
+            // 
+            panel7.BackColor = SystemColors.ActiveBorder;
+            panel7.Controls.Add(customTopping3);
+            panel7.Controls.Add(customTopping2);
+            panel7.Controls.Add(customTopping1);
+            panel7.Dock = DockStyle.Fill;
+            panel7.EdgeColor = Color.Transparent;
+            panel7.Location = new Point(3, 223);
+            panel7.Name = "panel7";
+            panel7.Padding = new Padding(5);
+            panel7.Size = new Size(482, 216);
+            panel7.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            panel7.TabIndex = 2;
+            panel7.Text = "panel7";
+            // 
+            // customTopping3
+            // 
+            customTopping3.AnimateReadOnly = false;
+            customTopping3.AutoCompleteMode = AutoCompleteMode.None;
+            customTopping3.AutoCompleteSource = AutoCompleteSource.None;
+            customTopping3.BackgroundImageLayout = ImageLayout.None;
+            customTopping3.CharacterCasing = CharacterCasing.Normal;
+            customTopping3.Depth = 0;
+            customTopping3.Dock = DockStyle.Top;
+            customTopping3.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            customTopping3.HideSelection = true;
+            customTopping3.Hint = "Add Custom Topping";
+            customTopping3.LeadingIcon = null;
+            customTopping3.Location = new Point(5, 101);
+            customTopping3.MaxLength = 32767;
+            customTopping3.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            customTopping3.Name = "customTopping3";
+            customTopping3.PasswordChar = '\0';
+            customTopping3.PrefixSuffixText = "Add Custom Topping";
+            customTopping3.ReadOnly = false;
+            customTopping3.RightToLeft = RightToLeft.No;
+            customTopping3.SelectedText = "";
+            customTopping3.SelectionLength = 0;
+            customTopping3.SelectionStart = 0;
+            customTopping3.ShortcutsEnabled = true;
+            customTopping3.Size = new Size(472, 48);
+            customTopping3.TabIndex = 3;
+            customTopping3.TabStop = false;
+            customTopping3.Text = " ";
+            customTopping3.TextAlign = HorizontalAlignment.Left;
+            customTopping3.TrailingIcon = null;
+            customTopping3.UseSystemPasswordChar = false;
+            // 
+            // customTopping2
+            // 
+            customTopping2.AnimateReadOnly = false;
+            customTopping2.AutoCompleteMode = AutoCompleteMode.None;
+            customTopping2.AutoCompleteSource = AutoCompleteSource.None;
+            customTopping2.BackgroundImageLayout = ImageLayout.None;
+            customTopping2.CharacterCasing = CharacterCasing.Normal;
+            customTopping2.Depth = 0;
+            customTopping2.Dock = DockStyle.Top;
+            customTopping2.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            customTopping2.HideSelection = true;
+            customTopping2.Hint = "Add Custom Topping";
+            customTopping2.LeadingIcon = null;
+            customTopping2.Location = new Point(5, 53);
+            customTopping2.MaxLength = 32767;
+            customTopping2.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            customTopping2.Name = "customTopping2";
+            customTopping2.PasswordChar = '\0';
+            customTopping2.PrefixSuffixText = "Add Custom Topping";
+            customTopping2.ReadOnly = false;
+            customTopping2.RightToLeft = RightToLeft.No;
+            customTopping2.SelectedText = "";
+            customTopping2.SelectionLength = 0;
+            customTopping2.SelectionStart = 0;
+            customTopping2.ShortcutsEnabled = true;
+            customTopping2.Size = new Size(472, 48);
+            customTopping2.TabIndex = 2;
+            customTopping2.TabStop = false;
+            customTopping2.Text = " ";
+            customTopping2.TextAlign = HorizontalAlignment.Left;
+            customTopping2.TrailingIcon = null;
+            customTopping2.UseSystemPasswordChar = false;
+            // 
+            // customTopping1
+            // 
+            customTopping1.AnimateReadOnly = false;
+            customTopping1.AutoCompleteMode = AutoCompleteMode.None;
+            customTopping1.AutoCompleteSource = AutoCompleteSource.None;
+            customTopping1.BackgroundImageLayout = ImageLayout.None;
+            customTopping1.CharacterCasing = CharacterCasing.Normal;
+            customTopping1.Depth = 0;
+            customTopping1.Dock = DockStyle.Top;
+            customTopping1.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            customTopping1.HideSelection = true;
+            customTopping1.Hint = "Add Custom Topping";
+            customTopping1.LeadingIcon = null;
+            customTopping1.Location = new Point(5, 5);
+            customTopping1.MaxLength = 32767;
+            customTopping1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            customTopping1.Name = "customTopping1";
+            customTopping1.PasswordChar = '\0';
+            customTopping1.PrefixSuffixText = "Add Custom Topping";
+            customTopping1.ReadOnly = false;
+            customTopping1.RightToLeft = RightToLeft.No;
+            customTopping1.SelectedText = "";
+            customTopping1.SelectionLength = 0;
+            customTopping1.SelectionStart = 0;
+            customTopping1.ShortcutsEnabled = true;
+            customTopping1.Size = new Size(472, 48);
+            customTopping1.TabIndex = 1;
+            customTopping1.TabStop = false;
+            customTopping1.Text = " ";
+            customTopping1.TextAlign = HorizontalAlignment.Left;
+            customTopping1.TrailingIcon = null;
+            customTopping1.UseSystemPasswordChar = false;
+            // 
             // panel3
             // 
-            panel3.BackColor = Color.FromArgb(39, 51, 63);
-            panel3.Controls.Add(materialSwitch1);
-            panel3.Controls.Add(materialLabel1);
+            panel3.BackColor = SystemColors.ActiveBorder;
+            panel3.Controls.Add(checkBoxPickle);
+            panel3.Controls.Add(checkBoxOnion);
+            panel3.Controls.Add(checkBoxLettuce);
+            panel3.Controls.Add(checkBoxTomato);
             panel3.Dock = DockStyle.Fill;
-            panel3.EdgeColor = Color.FromArgb(32, 41, 50);
-            panel3.Location = new Point(3, 3);
+            panel3.EdgeColor = Color.Transparent;
+            panel3.Location = new Point(3, 133);
             panel3.Name = "panel3";
             panel3.Padding = new Padding(5);
-            panel3.Size = new Size(482, 200);
+            panel3.Size = new Size(482, 84);
             panel3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             panel3.TabIndex = 1;
             panel3.Text = "panel3";
             // 
-            // materialSwitch1
+            // checkBoxPickle
             // 
-            materialSwitch1.AutoSize = true;
-            materialSwitch1.Depth = 0;
-            materialSwitch1.Location = new Point(8, 41);
-            materialSwitch1.Margin = new Padding(0);
-            materialSwitch1.MouseLocation = new Point(-1, -1);
-            materialSwitch1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            materialSwitch1.Name = "materialSwitch1";
-            materialSwitch1.Ripple = true;
-            materialSwitch1.Size = new Size(173, 37);
-            materialSwitch1.TabIndex = 1;
-            materialSwitch1.Text = "materialSwitch1";
-            materialSwitch1.UseAccentColor = false;
-            materialSwitch1.UseVisualStyleBackColor = true;
+            checkBoxPickle.AutoSize = true;
+            checkBoxPickle.Depth = 0;
+            checkBoxPickle.Location = new Point(193, 42);
+            checkBoxPickle.Margin = new Padding(0);
+            checkBoxPickle.MouseLocation = new Point(-1, -1);
+            checkBoxPickle.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            checkBoxPickle.Name = "checkBoxPickle";
+            checkBoxPickle.ReadOnly = false;
+            checkBoxPickle.Ripple = true;
+            checkBoxPickle.Size = new Size(77, 37);
+            checkBoxPickle.TabIndex = 4;
+            checkBoxPickle.Text = "Pickle";
+            checkBoxPickle.UseAccentColor = true;
+            checkBoxPickle.UseVisualStyleBackColor = true;
             // 
-            // materialLabel1
+            // checkBoxOnion
             // 
-            materialLabel1.AutoSize = true;
-            materialLabel1.Depth = 0;
-            materialLabel1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel1.Location = new Point(8, 5);
-            materialLabel1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            materialLabel1.Name = "materialLabel1";
-            materialLabel1.Size = new Size(102, 19);
-            materialLabel1.TabIndex = 0;
-            materialLabel1.Text = "Free Toppings";
+            checkBoxOnion.AutoSize = true;
+            checkBoxOnion.Depth = 0;
+            checkBoxOnion.Location = new Point(193, 5);
+            checkBoxOnion.Margin = new Padding(0);
+            checkBoxOnion.MouseLocation = new Point(-1, -1);
+            checkBoxOnion.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            checkBoxOnion.Name = "checkBoxOnion";
+            checkBoxOnion.ReadOnly = false;
+            checkBoxOnion.Ripple = true;
+            checkBoxOnion.Size = new Size(77, 37);
+            checkBoxOnion.TabIndex = 3;
+            checkBoxOnion.Text = "Onion";
+            checkBoxOnion.UseAccentColor = true;
+            checkBoxOnion.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxLettuce
+            // 
+            checkBoxLettuce.AutoSize = true;
+            checkBoxLettuce.Depth = 0;
+            checkBoxLettuce.Location = new Point(7, 42);
+            checkBoxLettuce.Margin = new Padding(0);
+            checkBoxLettuce.MouseLocation = new Point(-1, -1);
+            checkBoxLettuce.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            checkBoxLettuce.Name = "checkBoxLettuce";
+            checkBoxLettuce.ReadOnly = false;
+            checkBoxLettuce.Ripple = true;
+            checkBoxLettuce.Size = new Size(87, 37);
+            checkBoxLettuce.TabIndex = 2;
+            checkBoxLettuce.Text = "Lettuce";
+            checkBoxLettuce.UseAccentColor = true;
+            checkBoxLettuce.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxTomato
+            // 
+            checkBoxTomato.AutoSize = true;
+            checkBoxTomato.Depth = 0;
+            checkBoxTomato.Location = new Point(7, 5);
+            checkBoxTomato.Margin = new Padding(0);
+            checkBoxTomato.MouseLocation = new Point(-1, -1);
+            checkBoxTomato.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            checkBoxTomato.Name = "checkBoxTomato";
+            checkBoxTomato.ReadOnly = false;
+            checkBoxTomato.Ripple = true;
+            checkBoxTomato.Size = new Size(99, 37);
+            checkBoxTomato.TabIndex = 1;
+            checkBoxTomato.Text = "Tomatoe";
+            checkBoxTomato.UseAccentColor = true;
+            checkBoxTomato.UseVisualStyleBackColor = true;
+            // 
+            // panel9
+            // 
+            panel9.BackColor = SystemColors.ActiveBorder;
+            panel9.Controls.Add(comboBoxMeat);
+            panel9.Dock = DockStyle.Fill;
+            panel9.EdgeColor = Color.Transparent;
+            panel9.Location = new Point(3, 68);
+            panel9.Name = "panel9";
+            panel9.Padding = new Padding(5);
+            panel9.Size = new Size(482, 59);
+            panel9.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            panel9.TabIndex = 3;
+            panel9.Text = "panel9";
+            // 
+            // comboBoxMeat
+            // 
+            comboBoxMeat.AutoResize = false;
+            comboBoxMeat.BackColor = Color.FromArgb(255, 255, 255);
+            comboBoxMeat.Depth = 0;
+            comboBoxMeat.Dock = DockStyle.Fill;
+            comboBoxMeat.DrawMode = DrawMode.OwnerDrawVariable;
+            comboBoxMeat.DropDownHeight = 174;
+            comboBoxMeat.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxMeat.DropDownWidth = 121;
+            comboBoxMeat.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            comboBoxMeat.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            comboBoxMeat.FormattingEnabled = true;
+            comboBoxMeat.Hint = "Meat Type";
+            comboBoxMeat.IntegralHeight = false;
+            comboBoxMeat.ItemHeight = 43;
+            comboBoxMeat.Location = new Point(5, 5);
+            comboBoxMeat.MaxDropDownItems = 4;
+            comboBoxMeat.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            comboBoxMeat.Name = "comboBoxMeat";
+            comboBoxMeat.Size = new Size(472, 49);
+            comboBoxMeat.StartIndex = 0;
+            comboBoxMeat.TabIndex = 0;
+            // 
+            // panel10
+            // 
+            panel10.BackColor = SystemColors.ActiveBorder;
+            panel10.Controls.Add(maskedTextBoxName);
+            panel10.Dock = DockStyle.Fill;
+            panel10.EdgeColor = Color.Transparent;
+            panel10.Location = new Point(3, 3);
+            panel10.Name = "panel10";
+            panel10.Padding = new Padding(5);
+            panel10.Size = new Size(482, 59);
+            panel10.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            panel10.TabIndex = 4;
+            panel10.Text = "panel10";
+            // 
+            // maskedTextBoxName
+            // 
+            maskedTextBoxName.AllowPromptAsInput = true;
+            maskedTextBoxName.AnimateReadOnly = false;
+            maskedTextBoxName.AsciiOnly = false;
+            maskedTextBoxName.BackgroundImageLayout = ImageLayout.None;
+            maskedTextBoxName.BeepOnError = false;
+            maskedTextBoxName.CutCopyMaskFormat = MaskFormat.IncludeLiterals;
+            maskedTextBoxName.Depth = 0;
+            maskedTextBoxName.Dock = DockStyle.Fill;
+            maskedTextBoxName.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            maskedTextBoxName.HidePromptOnLeave = false;
+            maskedTextBoxName.HideSelection = true;
+            maskedTextBoxName.InsertKeyMode = InsertKeyMode.Default;
+            maskedTextBoxName.LeadingIcon = null;
+            maskedTextBoxName.Location = new Point(5, 5);
+            maskedTextBoxName.Mask = "";
+            maskedTextBoxName.MaxLength = 32767;
+            maskedTextBoxName.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            maskedTextBoxName.Name = "maskedTextBoxName";
+            maskedTextBoxName.PasswordChar = '\0';
+            maskedTextBoxName.PrefixSuffix = ReaLTaiizor.Controls.MaterialMaskedTextBox.PrefixSuffixTypes.Prefix;
+            maskedTextBoxName.PrefixSuffixText = "Name";
+            maskedTextBoxName.PromptChar = '_';
+            maskedTextBoxName.ReadOnly = false;
+            maskedTextBoxName.RejectInputOnFirstFailure = false;
+            maskedTextBoxName.ResetOnPrompt = true;
+            maskedTextBoxName.ResetOnSpace = true;
+            maskedTextBoxName.RightToLeft = RightToLeft.No;
+            maskedTextBoxName.SelectedText = "";
+            maskedTextBoxName.SelectionLength = 0;
+            maskedTextBoxName.SelectionStart = 0;
+            maskedTextBoxName.ShortcutsEnabled = true;
+            maskedTextBoxName.Size = new Size(472, 48);
+            maskedTextBoxName.SkipLiterals = true;
+            maskedTextBoxName.TabIndex = 5;
+            maskedTextBoxName.TabStop = false;
+            maskedTextBoxName.Text = "Burger";
+            maskedTextBoxName.TextAlign = HorizontalAlignment.Left;
+            maskedTextBoxName.TextMaskFormat = MaskFormat.IncludeLiterals;
+            maskedTextBoxName.TrailingIcon = null;
+            maskedTextBoxName.UseSystemPasswordChar = false;
+            maskedTextBoxName.ValidatingType = null;
             // 
             // Coffee
             // 
@@ -478,12 +754,15 @@
             dataGridViewMain.Location = new Point(5, 5);
             dataGridViewMain.Name = "dataGridViewMain";
             dataGridViewMain.ReadOnly = true;
-            dataGridViewMain.RowHeadersVisible = false;
             dataGridViewMain.RowTemplate.Height = 25;
             dataGridViewMain.ShowCellToolTips = false;
             dataGridViewMain.ShowEditingIcon = false;
             dataGridViewMain.Size = new Size(714, 629);
             dataGridViewMain.TabIndex = 0;
+            // 
+            // menuManagerBindingSource
+            // 
+            menuManagerBindingSource.DataSource = typeof(Backend.MenuManager);
             // 
             // panel4
             // 
@@ -587,7 +866,7 @@
             maskedTextBoxPrice.TabIndex = 22;
             maskedTextBoxPrice.TabStop = false;
             maskedTextBoxPrice.TextAlign = HorizontalAlignment.Left;
-            maskedTextBoxPrice.TextMaskFormat = MaskFormat.IncludeLiterals;
+            maskedTextBoxPrice.TextMaskFormat = MaskFormat.IncludePrompt;
             maskedTextBoxPrice.TrailingIcon = null;
             maskedTextBoxPrice.UseSystemPasswordChar = false;
             maskedTextBoxPrice.ValidatingType = null;
@@ -614,6 +893,57 @@
             buttonClear.UseAccentColor = true;
             buttonClear.UseVisualStyleBackColor = true;
             // 
+            // materialCheckBox2
+            // 
+            materialCheckBox2.AutoSize = true;
+            materialCheckBox2.Depth = 0;
+            materialCheckBox2.Location = new Point(0, 0);
+            materialCheckBox2.Margin = new Padding(0);
+            materialCheckBox2.MouseLocation = new Point(-1, -1);
+            materialCheckBox2.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialCheckBox2.Name = "materialCheckBox2";
+            materialCheckBox2.ReadOnly = false;
+            materialCheckBox2.Ripple = true;
+            materialCheckBox2.Size = new Size(10, 10);
+            materialCheckBox2.TabIndex = 0;
+            materialCheckBox2.Text = "materialCheckBox2";
+            materialCheckBox2.UseAccentColor = false;
+            materialCheckBox2.UseVisualStyleBackColor = true;
+            // 
+            // materialCheckBox3
+            // 
+            materialCheckBox3.AutoSize = true;
+            materialCheckBox3.Depth = 0;
+            materialCheckBox3.Location = new Point(0, 0);
+            materialCheckBox3.Margin = new Padding(0);
+            materialCheckBox3.MouseLocation = new Point(-1, -1);
+            materialCheckBox3.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialCheckBox3.Name = "materialCheckBox3";
+            materialCheckBox3.ReadOnly = false;
+            materialCheckBox3.Ripple = true;
+            materialCheckBox3.Size = new Size(10, 10);
+            materialCheckBox3.TabIndex = 0;
+            materialCheckBox3.Text = "materialCheckBox3";
+            materialCheckBox3.UseAccentColor = false;
+            materialCheckBox3.UseVisualStyleBackColor = true;
+            // 
+            // materialCheckBox4
+            // 
+            materialCheckBox4.AutoSize = true;
+            materialCheckBox4.Depth = 0;
+            materialCheckBox4.Location = new Point(0, 0);
+            materialCheckBox4.Margin = new Padding(0);
+            materialCheckBox4.MouseLocation = new Point(-1, -1);
+            materialCheckBox4.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialCheckBox4.Name = "materialCheckBox4";
+            materialCheckBox4.ReadOnly = false;
+            materialCheckBox4.Ripple = true;
+            materialCheckBox4.Size = new Size(10, 10);
+            materialCheckBox4.TabIndex = 0;
+            materialCheckBox4.Text = "materialCheckBox4";
+            materialCheckBox4.UseAccentColor = false;
+            materialCheckBox4.UseVisualStyleBackColor = true;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -627,12 +957,16 @@
             Name = "FormMain";
             Padding = new Padding(0, 64, 3, 3);
             Text = "Menu Manager";
+            FormClosing += FormMain_FormClosing;
             Load += FormMain_Load;
             materialTabControl1.ResumeLayout(false);
             Food.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
+            panel7.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            panel9.ResumeLayout(false);
+            panel10.ResumeLayout(false);
             Coffee.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
@@ -642,6 +976,7 @@
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewMain).EndInit();
+            ((System.ComponentModel.ISupportInitialize)menuManagerBindingSource).EndInit();
             panel4.ResumeLayout(false);
             panel5.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
@@ -676,12 +1011,25 @@
         private ReaLTaiizor.Controls.MaterialSwitch switchCarbonated;
         private ReaLTaiizor.Controls.MaterialComboBox comboBoxSoftDrinkSize;
         private ReaLTaiizor.Controls.MaterialComboBox comboBoxSoftDrink;
-        private ReaLTaiizor.Controls.MaterialButton materialButton1;
         private TableLayoutPanel tableLayoutPanel2;
         private ReaLTaiizor.Controls.MaterialButton buttonClear;
         private ReaLTaiizor.Controls.MaterialMaskedTextBox maskedTextBoxPrice;
         private TableLayoutPanel tableLayoutPanel3;
-        private ReaLTaiizor.Controls.MaterialLabel materialLabel1;
-        private ReaLTaiizor.Controls.MaterialSwitch materialSwitch1;
+        private ReaLTaiizor.Controls.MaterialCheckBox checkBoxTomato;
+        private ReaLTaiizor.Controls.MaterialCheckBox materialCheckBox2;
+        private ReaLTaiizor.Controls.MaterialCheckBox materialCheckBox3;
+        private ReaLTaiizor.Controls.MaterialCheckBox materialCheckBox4;
+        private ReaLTaiizor.Controls.MaterialCheckBox checkBoxPickle;
+        private ReaLTaiizor.Controls.MaterialCheckBox checkBoxOnion;
+        private ReaLTaiizor.Controls.MaterialCheckBox checkBoxLettuce;
+        private ReaLTaiizor.Controls.Panel panel7;
+        private ReaLTaiizor.Controls.Panel panel9;
+        private ReaLTaiizor.Controls.MaterialComboBox comboBoxMeat;
+        private ReaLTaiizor.Controls.MaterialTextBoxEdit customTopping3;
+        private ReaLTaiizor.Controls.MaterialTextBoxEdit customTopping2;
+        private ReaLTaiizor.Controls.MaterialTextBoxEdit customTopping1;
+        private ReaLTaiizor.Controls.Panel panel10;
+        private ReaLTaiizor.Controls.MaterialMaskedTextBox maskedTextBoxName;
+        private BindingSource menuManagerBindingSource;
     }
 }
