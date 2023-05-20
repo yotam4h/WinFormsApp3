@@ -54,7 +54,7 @@ namespace WinFormsApp3.Backend
             menuItems.Clear();
         }
 
-        public static BindingList<T> GetMenuItemsByChild<T>() where T : MenuItem
+        public static BindingList<T> GetMenuItemsBy<T>() where T : MenuItem
         {
             BindingList<T> child = new();
             foreach (MenuItem element in menuItems)
