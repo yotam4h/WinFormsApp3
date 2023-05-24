@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             materialTabControl1 = new ReaLTaiizor.Controls.MaterialTabControl();
             Home = new TabPage();
-            materialButton1 = new ReaLTaiizor.Controls.MaterialButton();
             Food = new TabPage();
             tableLayoutPanel3 = new TableLayoutPanel();
             panel7 = new ReaLTaiizor.Controls.Panel();
@@ -49,19 +48,18 @@
             panel10 = new ReaLTaiizor.Controls.Panel();
             maskedTextBoxBurgerName = new ReaLTaiizor.Controls.MaterialMaskedTextBox();
             Coffee = new TabPage();
-            panel1 = new ReaLTaiizor.Controls.Panel();
+            tableLayoutPanel6 = new TableLayoutPanel();
             panel2 = new ReaLTaiizor.Controls.Panel();
-            switchCoffeeIce = new ReaLTaiizor.Controls.MaterialSwitch();
-            switchDecaf = new ReaLTaiizor.Controls.MaterialSwitch();
-            comboBoxMilkType = new ReaLTaiizor.Controls.MaterialComboBox();
-            comboBoxCoffeeType = new ReaLTaiizor.Controls.MaterialComboBox();
-            SoftDrink = new TabPage();
-            panel6 = new ReaLTaiizor.Controls.Panel();
+            checkBoxStrong = new ReaLTaiizor.Controls.MaterialCheckBox();
+            checkBoxCold = new ReaLTaiizor.Controls.MaterialCheckBox();
+            panel1 = new ReaLTaiizor.Controls.Panel();
+            comboBoxBeans = new ReaLTaiizor.Controls.MaterialComboBox();
             panel8 = new ReaLTaiizor.Controls.Panel();
-            switchSoftDrinkIce = new ReaLTaiizor.Controls.MaterialSwitch();
-            switchCarbonated = new ReaLTaiizor.Controls.MaterialSwitch();
-            comboBoxSoftDrinkSize = new ReaLTaiizor.Controls.MaterialComboBox();
-            comboBoxSoftDrink = new ReaLTaiizor.Controls.MaterialComboBox();
+            comboBoxMilk = new ReaLTaiizor.Controls.MaterialComboBox();
+            panel19 = new ReaLTaiizor.Controls.Panel();
+            maskedTextBoxCoffeName = new ReaLTaiizor.Controls.MaterialMaskedTextBox();
+            panel24 = new ReaLTaiizor.Controls.Panel();
+            comboBoxCoffeeSize = new ReaLTaiizor.Controls.MaterialComboBox();
             Cocktail = new TabPage();
             tableLayoutPanel5 = new TableLayoutPanel();
             panel13 = new ReaLTaiizor.Controls.Panel();
@@ -83,11 +81,10 @@
             comboBoxCocktailSize = new ReaLTaiizor.Controls.MaterialComboBox();
             menuIcons = new ImageList(components);
             buttonAdd = new ReaLTaiizor.Controls.MaterialButton();
-            dataGridViewMain = new DataGridView();
-            menuManagerBindingSource = new BindingSource(components);
-            panel4 = new ReaLTaiizor.Controls.Panel();
             panel5 = new ReaLTaiizor.Controls.Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
+            panel4 = new ReaLTaiizor.Controls.Panel();
+            dataGridViewMain = new DataGridView();
             tableLayoutPanel2 = new TableLayoutPanel();
             maskedTextBoxPrice = new ReaLTaiizor.Controls.MaterialMaskedTextBox();
             buttonClear = new ReaLTaiizor.Controls.MaterialButton();
@@ -105,8 +102,18 @@
             materialCheckBox6 = new ReaLTaiizor.Controls.MaterialCheckBox();
             materialCheckBox7 = new ReaLTaiizor.Controls.MaterialCheckBox();
             tabPage1 = new TabPage();
+            panel18 = new ReaLTaiizor.Controls.Panel();
+            tableLayoutPanel7 = new TableLayoutPanel();
+            panel21 = new ReaLTaiizor.Controls.Panel();
+            materialButtonSave = new ReaLTaiizor.Controls.MaterialButton();
+            panel20 = new ReaLTaiizor.Controls.Panel();
+            materialButtonLoad = new ReaLTaiizor.Controls.MaterialButton();
+            panel22 = new ReaLTaiizor.Controls.Panel();
+            materialButtonExport = new ReaLTaiizor.Controls.MaterialButton();
+            panel23 = new ReaLTaiizor.Controls.Panel();
+            pictureBox1 = new PictureBox();
+            materialLabel1 = new ReaLTaiizor.Controls.MaterialLabel();
             materialTabControl1.SuspendLayout();
-            Home.SuspendLayout();
             Food.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             panel7.SuspendLayout();
@@ -114,11 +121,12 @@
             panel9.SuspendLayout();
             panel10.SuspendLayout();
             Coffee.SuspendLayout();
-            panel1.SuspendLayout();
+            tableLayoutPanel6.SuspendLayout();
             panel2.SuspendLayout();
-            SoftDrink.SuspendLayout();
-            panel6.SuspendLayout();
+            panel1.SuspendLayout();
             panel8.SuspendLayout();
+            panel19.SuspendLayout();
+            panel24.SuspendLayout();
             Cocktail.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
             panel13.SuspendLayout();
@@ -126,15 +134,21 @@
             panel15.SuspendLayout();
             panel16.SuspendLayout();
             panel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewMain).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)menuManagerBindingSource).BeginInit();
-            panel4.SuspendLayout();
             panel5.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewMain).BeginInit();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             panel11.SuspendLayout();
             panel12.SuspendLayout();
+            panel18.SuspendLayout();
+            tableLayoutPanel7.SuspendLayout();
+            panel21.SuspendLayout();
+            panel20.SuspendLayout();
+            panel22.SuspendLayout();
+            panel23.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // materialTabControl1
@@ -144,7 +158,6 @@
             materialTabControl1.Controls.Add(Home);
             materialTabControl1.Controls.Add(Food);
             materialTabControl1.Controls.Add(Coffee);
-            materialTabControl1.Controls.Add(SoftDrink);
             materialTabControl1.Controls.Add(Cocktail);
             materialTabControl1.Depth = 0;
             materialTabControl1.Dock = DockStyle.Fill;
@@ -156,43 +169,21 @@
             materialTabControl1.Multiline = true;
             materialTabControl1.Name = "materialTabControl1";
             materialTabControl1.SelectedIndex = 0;
-            materialTabControl1.Size = new Size(490, 556);
+            materialTabControl1.Size = new Size(353, 556);
             materialTabControl1.SizeMode = TabSizeMode.FillToRight;
             materialTabControl1.TabIndex = 18;
             materialTabControl1.Selected += materialTabControl1_Selected;
             // 
             // Home
             // 
-            Home.Controls.Add(materialButton1);
             Home.ImageKey = "home_page_24px.png";
             Home.Location = new Point(4, 61);
             Home.Name = "Home";
             Home.Padding = new Padding(3);
-            Home.Size = new Size(482, 491);
+            Home.Size = new Size(345, 491);
             Home.TabIndex = 0;
             Home.Text = "Home";
             Home.UseVisualStyleBackColor = true;
-            // 
-            // materialButton1
-            // 
-            materialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton1.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton1.Depth = 0;
-            materialButton1.HighEmphasis = true;
-            materialButton1.Icon = null;
-            materialButton1.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton1.Location = new Point(80, 50);
-            materialButton1.Margin = new Padding(4, 6, 4, 6);
-            materialButton1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            materialButton1.Name = "materialButton1";
-            materialButton1.NoAccentTextColor = Color.Empty;
-            materialButton1.Size = new Size(108, 36);
-            materialButton1.TabIndex = 0;
-            materialButton1.Text = "Export PDF";
-            materialButton1.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton1.UseAccentColor = false;
-            materialButton1.UseVisualStyleBackColor = true;
-            materialButton1.Click += materialButton1_Click;
             // 
             // Food
             // 
@@ -201,7 +192,7 @@
             Food.Location = new Point(4, 61);
             Food.Name = "Food";
             Food.Padding = new Padding(3);
-            Food.Size = new Size(482, 491);
+            Food.Size = new Size(345, 491);
             Food.TabIndex = 1;
             Food.Text = "Add Burger";
             Food.UseVisualStyleBackColor = true;
@@ -222,7 +213,7 @@
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 65F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 90F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle());
-            tableLayoutPanel3.Size = new Size(476, 485);
+            tableLayoutPanel3.Size = new Size(339, 485);
             tableLayoutPanel3.TabIndex = 0;
             // 
             // panel7
@@ -236,7 +227,7 @@
             panel7.Location = new Point(3, 223);
             panel7.Name = "panel7";
             panel7.Padding = new Padding(5);
-            panel7.Size = new Size(470, 291);
+            panel7.Size = new Size(333, 313);
             panel7.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             panel7.TabIndex = 2;
             panel7.Text = "panel7";
@@ -266,10 +257,9 @@
             customTopping3.SelectionLength = 0;
             customTopping3.SelectionStart = 0;
             customTopping3.ShortcutsEnabled = true;
-            customTopping3.Size = new Size(460, 48);
+            customTopping3.Size = new Size(323, 48);
             customTopping3.TabIndex = 3;
             customTopping3.TabStop = false;
-            customTopping3.Text = " ";
             customTopping3.TextAlign = HorizontalAlignment.Left;
             customTopping3.TrailingIcon = null;
             customTopping3.UseSystemPasswordChar = false;
@@ -299,10 +289,9 @@
             customTopping2.SelectionLength = 0;
             customTopping2.SelectionStart = 0;
             customTopping2.ShortcutsEnabled = true;
-            customTopping2.Size = new Size(460, 48);
+            customTopping2.Size = new Size(323, 48);
             customTopping2.TabIndex = 2;
             customTopping2.TabStop = false;
-            customTopping2.Text = " ";
             customTopping2.TextAlign = HorizontalAlignment.Left;
             customTopping2.TrailingIcon = null;
             customTopping2.UseSystemPasswordChar = false;
@@ -332,10 +321,9 @@
             customTopping1.SelectionLength = 0;
             customTopping1.SelectionStart = 0;
             customTopping1.ShortcutsEnabled = true;
-            customTopping1.Size = new Size(460, 48);
+            customTopping1.Size = new Size(323, 48);
             customTopping1.TabIndex = 1;
             customTopping1.TabStop = false;
-            customTopping1.Text = " ";
             customTopping1.TextAlign = HorizontalAlignment.Left;
             customTopping1.TrailingIcon = null;
             customTopping1.UseSystemPasswordChar = false;
@@ -352,7 +340,7 @@
             panel3.Location = new Point(3, 133);
             panel3.Name = "panel3";
             panel3.Padding = new Padding(5);
-            panel3.Size = new Size(470, 84);
+            panel3.Size = new Size(333, 84);
             panel3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             panel3.TabIndex = 1;
             panel3.Text = "panel3";
@@ -434,7 +422,7 @@
             panel9.Location = new Point(3, 68);
             panel9.Name = "panel9";
             panel9.Padding = new Padding(5);
-            panel9.Size = new Size(470, 59);
+            panel9.Size = new Size(333, 59);
             panel9.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             panel9.TabIndex = 3;
             panel9.Text = "panel9";
@@ -459,7 +447,7 @@
             comboBoxMeat.MaxDropDownItems = 4;
             comboBoxMeat.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             comboBoxMeat.Name = "comboBoxMeat";
-            comboBoxMeat.Size = new Size(460, 49);
+            comboBoxMeat.Size = new Size(323, 49);
             comboBoxMeat.StartIndex = 0;
             comboBoxMeat.TabIndex = 0;
             // 
@@ -472,7 +460,7 @@
             panel10.Location = new Point(3, 3);
             panel10.Name = "panel10";
             panel10.Padding = new Padding(5);
-            panel10.Size = new Size(470, 59);
+            panel10.Size = new Size(333, 59);
             panel10.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             panel10.TabIndex = 4;
             panel10.Text = "panel10";
@@ -510,7 +498,7 @@
             maskedTextBoxBurgerName.SelectionLength = 0;
             maskedTextBoxBurgerName.SelectionStart = 0;
             maskedTextBoxBurgerName.ShortcutsEnabled = true;
-            maskedTextBoxBurgerName.Size = new Size(460, 48);
+            maskedTextBoxBurgerName.Size = new Size(323, 48);
             maskedTextBoxBurgerName.SkipLiterals = true;
             maskedTextBoxBurgerName.TabIndex = 5;
             maskedTextBoxBurgerName.TabStop = false;
@@ -523,254 +511,256 @@
             // 
             // Coffee
             // 
-            Coffee.Controls.Add(panel1);
+            Coffee.Controls.Add(tableLayoutPanel6);
             Coffee.ImageKey = "cafe_24px.png";
             Coffee.Location = new Point(4, 61);
             Coffee.Name = "Coffee";
             Coffee.Padding = new Padding(3);
-            Coffee.Size = new Size(482, 491);
+            Coffee.Size = new Size(345, 491);
             Coffee.TabIndex = 2;
             Coffee.Text = "Add Coffee";
             Coffee.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // tableLayoutPanel6
             // 
-            panel1.BackColor = SystemColors.ControlDarkDark;
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(comboBoxMilkType);
-            panel1.Controls.Add(comboBoxCoffeeType);
-            panel1.Dock = DockStyle.Fill;
-            panel1.EdgeColor = Color.Transparent;
-            panel1.Location = new Point(3, 3);
-            panel1.Name = "panel1";
-            panel1.Padding = new Padding(5);
-            panel1.Size = new Size(476, 485);
-            panel1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            panel1.TabIndex = 1;
-            panel1.Text = "panel1";
+            tableLayoutPanel6.ColumnCount = 1;
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel6.Controls.Add(panel2, 0, 4);
+            tableLayoutPanel6.Controls.Add(panel1, 0, 3);
+            tableLayoutPanel6.Controls.Add(panel8, 0, 1);
+            tableLayoutPanel6.Controls.Add(panel19, 0, 0);
+            tableLayoutPanel6.Controls.Add(panel24, 0, 2);
+            tableLayoutPanel6.Dock = DockStyle.Fill;
+            tableLayoutPanel6.Location = new Point(3, 3);
+            tableLayoutPanel6.Name = "tableLayoutPanel6";
+            tableLayoutPanel6.RowCount = 5;
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 65F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 65F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 65F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 65F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 65F));
+            tableLayoutPanel6.Size = new Size(339, 485);
+            tableLayoutPanel6.TabIndex = 2;
             // 
             // panel2
             // 
             panel2.BackColor = SystemColors.ActiveBorder;
-            panel2.Controls.Add(switchCoffeeIce);
-            panel2.Controls.Add(switchDecaf);
-            panel2.Dock = DockStyle.Top;
+            panel2.Controls.Add(checkBoxStrong);
+            panel2.Controls.Add(checkBoxCold);
+            panel2.Dock = DockStyle.Fill;
             panel2.EdgeColor = Color.Transparent;
-            panel2.Location = new Point(5, 103);
+            panel2.Location = new Point(3, 263);
             panel2.Name = "panel2";
             panel2.Padding = new Padding(5);
-            panel2.Size = new Size(466, 83);
+            panel2.Size = new Size(333, 219);
             panel2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             panel2.TabIndex = 7;
             panel2.Text = "panel2";
             // 
-            // switchCoffeeIce
+            // checkBoxStrong
             // 
-            switchCoffeeIce.AutoSize = true;
-            switchCoffeeIce.Depth = 0;
-            switchCoffeeIce.Location = new Point(140, 5);
-            switchCoffeeIce.Margin = new Padding(0);
-            switchCoffeeIce.MouseLocation = new Point(-1, -1);
-            switchCoffeeIce.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            switchCoffeeIce.Name = "switchCoffeeIce";
-            switchCoffeeIce.Ripple = true;
-            switchCoffeeIce.Size = new Size(78, 37);
-            switchCoffeeIce.TabIndex = 5;
-            switchCoffeeIce.Text = "Ice";
-            switchCoffeeIce.UseAccentColor = false;
-            switchCoffeeIce.UseVisualStyleBackColor = true;
+            checkBoxStrong.AutoSize = true;
+            checkBoxStrong.Depth = 0;
+            checkBoxStrong.Location = new Point(5, 5);
+            checkBoxStrong.Margin = new Padding(0);
+            checkBoxStrong.MouseLocation = new Point(-1, -1);
+            checkBoxStrong.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            checkBoxStrong.Name = "checkBoxStrong";
+            checkBoxStrong.ReadOnly = false;
+            checkBoxStrong.Ripple = true;
+            checkBoxStrong.Size = new Size(82, 37);
+            checkBoxStrong.TabIndex = 1;
+            checkBoxStrong.Text = "Strong";
+            checkBoxStrong.UseAccentColor = false;
+            checkBoxStrong.UseVisualStyleBackColor = true;
             // 
-            // switchDecaf
+            // checkBoxCold
             // 
-            switchDecaf.AutoSize = true;
-            switchDecaf.Depth = 0;
-            switchDecaf.Location = new Point(5, 5);
-            switchDecaf.Margin = new Padding(0);
-            switchDecaf.MouseLocation = new Point(-1, -1);
-            switchDecaf.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            switchDecaf.Name = "switchDecaf";
-            switchDecaf.Ripple = true;
-            switchDecaf.Size = new Size(100, 37);
-            switchDecaf.TabIndex = 4;
-            switchDecaf.Text = "Decaf";
-            switchDecaf.UseAccentColor = false;
-            switchDecaf.UseVisualStyleBackColor = true;
+            checkBoxCold.AutoSize = true;
+            checkBoxCold.Depth = 0;
+            checkBoxCold.Location = new Point(5, 42);
+            checkBoxCold.Margin = new Padding(0);
+            checkBoxCold.MouseLocation = new Point(-1, -1);
+            checkBoxCold.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            checkBoxCold.Name = "checkBoxCold";
+            checkBoxCold.ReadOnly = false;
+            checkBoxCold.Ripple = true;
+            checkBoxCold.Size = new Size(67, 37);
+            checkBoxCold.TabIndex = 0;
+            checkBoxCold.Text = "Cold";
+            checkBoxCold.UseAccentColor = false;
+            checkBoxCold.UseVisualStyleBackColor = true;
             // 
-            // comboBoxMilkType
+            // panel1
             // 
-            comboBoxMilkType.AutoResize = false;
-            comboBoxMilkType.BackColor = Color.FromArgb(255, 255, 255);
-            comboBoxMilkType.Depth = 0;
-            comboBoxMilkType.Dock = DockStyle.Top;
-            comboBoxMilkType.DrawMode = DrawMode.OwnerDrawVariable;
-            comboBoxMilkType.DropDownHeight = 174;
-            comboBoxMilkType.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxMilkType.DropDownWidth = 121;
-            comboBoxMilkType.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBoxMilkType.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            comboBoxMilkType.FormattingEnabled = true;
-            comboBoxMilkType.Hint = "Milk";
-            comboBoxMilkType.IntegralHeight = false;
-            comboBoxMilkType.ItemHeight = 43;
-            comboBoxMilkType.Location = new Point(5, 54);
-            comboBoxMilkType.MaxDropDownItems = 4;
-            comboBoxMilkType.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            comboBoxMilkType.Name = "comboBoxMilkType";
-            comboBoxMilkType.Size = new Size(466, 49);
-            comboBoxMilkType.StartIndex = 0;
-            comboBoxMilkType.TabIndex = 3;
-            comboBoxMilkType.UseAccent = false;
+            panel1.BackColor = SystemColors.ActiveBorder;
+            panel1.Controls.Add(comboBoxBeans);
+            panel1.Dock = DockStyle.Fill;
+            panel1.EdgeColor = Color.Transparent;
+            panel1.Location = new Point(3, 198);
+            panel1.Name = "panel1";
+            panel1.Padding = new Padding(5);
+            panel1.Size = new Size(333, 59);
+            panel1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            panel1.TabIndex = 6;
+            panel1.Text = "panel1";
             // 
-            // comboBoxCoffeeType
+            // comboBoxBeans
             // 
-            comboBoxCoffeeType.AutoResize = false;
-            comboBoxCoffeeType.BackColor = Color.FromArgb(255, 255, 255);
-            comboBoxCoffeeType.Depth = 0;
-            comboBoxCoffeeType.Dock = DockStyle.Top;
-            comboBoxCoffeeType.DrawMode = DrawMode.OwnerDrawVariable;
-            comboBoxCoffeeType.DropDownHeight = 174;
-            comboBoxCoffeeType.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxCoffeeType.DropDownWidth = 121;
-            comboBoxCoffeeType.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBoxCoffeeType.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            comboBoxCoffeeType.FormattingEnabled = true;
-            comboBoxCoffeeType.Hint = "Coffee ";
-            comboBoxCoffeeType.IntegralHeight = false;
-            comboBoxCoffeeType.ItemHeight = 43;
-            comboBoxCoffeeType.Location = new Point(5, 5);
-            comboBoxCoffeeType.MaxDropDownItems = 4;
-            comboBoxCoffeeType.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            comboBoxCoffeeType.Name = "comboBoxCoffeeType";
-            comboBoxCoffeeType.Size = new Size(466, 49);
-            comboBoxCoffeeType.Sorted = true;
-            comboBoxCoffeeType.StartIndex = 0;
-            comboBoxCoffeeType.TabIndex = 2;
-            comboBoxCoffeeType.UseAccent = false;
-            // 
-            // SoftDrink
-            // 
-            SoftDrink.Controls.Add(panel6);
-            SoftDrink.ImageKey = "soda_bottle_24px.png";
-            SoftDrink.Location = new Point(4, 61);
-            SoftDrink.Name = "SoftDrink";
-            SoftDrink.Padding = new Padding(3);
-            SoftDrink.Size = new Size(482, 491);
-            SoftDrink.TabIndex = 3;
-            SoftDrink.Text = "Add Soft Drink";
-            SoftDrink.UseVisualStyleBackColor = true;
-            // 
-            // panel6
-            // 
-            panel6.BackColor = SystemColors.ControlDarkDark;
-            panel6.Controls.Add(panel8);
-            panel6.Controls.Add(comboBoxSoftDrinkSize);
-            panel6.Controls.Add(comboBoxSoftDrink);
-            panel6.Dock = DockStyle.Fill;
-            panel6.EdgeColor = Color.Transparent;
-            panel6.Location = new Point(3, 3);
-            panel6.Name = "panel6";
-            panel6.Padding = new Padding(5);
-            panel6.Size = new Size(476, 485);
-            panel6.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            panel6.TabIndex = 2;
-            panel6.Text = "panel6";
+            comboBoxBeans.AutoResize = false;
+            comboBoxBeans.BackColor = Color.FromArgb(255, 255, 255);
+            comboBoxBeans.Depth = 0;
+            comboBoxBeans.Dock = DockStyle.Fill;
+            comboBoxBeans.DrawMode = DrawMode.OwnerDrawVariable;
+            comboBoxBeans.DropDownHeight = 174;
+            comboBoxBeans.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxBeans.DropDownWidth = 121;
+            comboBoxBeans.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            comboBoxBeans.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            comboBoxBeans.FormattingEnabled = true;
+            comboBoxBeans.Hint = "Beans type";
+            comboBoxBeans.IntegralHeight = false;
+            comboBoxBeans.ItemHeight = 43;
+            comboBoxBeans.Location = new Point(5, 5);
+            comboBoxBeans.MaxDropDownItems = 4;
+            comboBoxBeans.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            comboBoxBeans.Name = "comboBoxBeans";
+            comboBoxBeans.Size = new Size(323, 49);
+            comboBoxBeans.StartIndex = 0;
+            comboBoxBeans.TabIndex = 0;
             // 
             // panel8
             // 
             panel8.BackColor = SystemColors.ActiveBorder;
-            panel8.Controls.Add(switchSoftDrinkIce);
-            panel8.Controls.Add(switchCarbonated);
-            panel8.Dock = DockStyle.Top;
+            panel8.Controls.Add(comboBoxMilk);
+            panel8.Dock = DockStyle.Fill;
             panel8.EdgeColor = Color.Transparent;
-            panel8.Location = new Point(5, 103);
+            panel8.Location = new Point(3, 68);
             panel8.Name = "panel8";
             panel8.Padding = new Padding(5);
-            panel8.Size = new Size(466, 83);
+            panel8.Size = new Size(333, 59);
             panel8.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            panel8.TabIndex = 7;
+            panel8.TabIndex = 3;
             panel8.Text = "panel8";
             // 
-            // switchSoftDrinkIce
+            // comboBoxMilk
             // 
-            switchSoftDrinkIce.AutoSize = true;
-            switchSoftDrinkIce.Depth = 0;
-            switchSoftDrinkIce.Location = new Point(164, 5);
-            switchSoftDrinkIce.Margin = new Padding(0);
-            switchSoftDrinkIce.MouseLocation = new Point(-1, -1);
-            switchSoftDrinkIce.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            switchSoftDrinkIce.Name = "switchSoftDrinkIce";
-            switchSoftDrinkIce.Ripple = true;
-            switchSoftDrinkIce.Size = new Size(78, 37);
-            switchSoftDrinkIce.TabIndex = 5;
-            switchSoftDrinkIce.Text = "Ice";
-            switchSoftDrinkIce.UseAccentColor = false;
-            switchSoftDrinkIce.UseVisualStyleBackColor = true;
+            comboBoxMilk.AutoResize = false;
+            comboBoxMilk.BackColor = Color.FromArgb(255, 255, 255);
+            comboBoxMilk.Depth = 0;
+            comboBoxMilk.Dock = DockStyle.Fill;
+            comboBoxMilk.DrawMode = DrawMode.OwnerDrawVariable;
+            comboBoxMilk.DropDownHeight = 174;
+            comboBoxMilk.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxMilk.DropDownWidth = 121;
+            comboBoxMilk.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            comboBoxMilk.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            comboBoxMilk.FormattingEnabled = true;
+            comboBoxMilk.Hint = "Milk type";
+            comboBoxMilk.IntegralHeight = false;
+            comboBoxMilk.ItemHeight = 43;
+            comboBoxMilk.Location = new Point(5, 5);
+            comboBoxMilk.MaxDropDownItems = 4;
+            comboBoxMilk.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            comboBoxMilk.Name = "comboBoxMilk";
+            comboBoxMilk.Size = new Size(323, 49);
+            comboBoxMilk.StartIndex = 0;
+            comboBoxMilk.TabIndex = 0;
             // 
-            // switchCarbonated
+            // panel19
             // 
-            switchCarbonated.AutoSize = true;
-            switchCarbonated.Depth = 0;
-            switchCarbonated.Location = new Point(5, 5);
-            switchCarbonated.Margin = new Padding(0);
-            switchCarbonated.MouseLocation = new Point(-1, -1);
-            switchCarbonated.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            switchCarbonated.Name = "switchCarbonated";
-            switchCarbonated.Ripple = true;
-            switchCarbonated.Size = new Size(140, 37);
-            switchCarbonated.TabIndex = 4;
-            switchCarbonated.Text = "Carbonated";
-            switchCarbonated.UseAccentColor = false;
-            switchCarbonated.UseVisualStyleBackColor = true;
+            panel19.BackColor = SystemColors.ActiveBorder;
+            panel19.Controls.Add(maskedTextBoxCoffeName);
+            panel19.Dock = DockStyle.Fill;
+            panel19.EdgeColor = Color.Transparent;
+            panel19.Location = new Point(3, 3);
+            panel19.Name = "panel19";
+            panel19.Padding = new Padding(5);
+            panel19.Size = new Size(333, 59);
+            panel19.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            panel19.TabIndex = 4;
+            panel19.Text = "panel19";
             // 
-            // comboBoxSoftDrinkSize
+            // maskedTextBoxCoffeName
             // 
-            comboBoxSoftDrinkSize.AutoResize = false;
-            comboBoxSoftDrinkSize.BackColor = Color.FromArgb(255, 255, 255);
-            comboBoxSoftDrinkSize.Depth = 0;
-            comboBoxSoftDrinkSize.Dock = DockStyle.Top;
-            comboBoxSoftDrinkSize.DrawMode = DrawMode.OwnerDrawVariable;
-            comboBoxSoftDrinkSize.DropDownHeight = 174;
-            comboBoxSoftDrinkSize.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxSoftDrinkSize.DropDownWidth = 121;
-            comboBoxSoftDrinkSize.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBoxSoftDrinkSize.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            comboBoxSoftDrinkSize.FormattingEnabled = true;
-            comboBoxSoftDrinkSize.Hint = "Size";
-            comboBoxSoftDrinkSize.IntegralHeight = false;
-            comboBoxSoftDrinkSize.ItemHeight = 43;
-            comboBoxSoftDrinkSize.Location = new Point(5, 54);
-            comboBoxSoftDrinkSize.MaxDropDownItems = 4;
-            comboBoxSoftDrinkSize.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            comboBoxSoftDrinkSize.Name = "comboBoxSoftDrinkSize";
-            comboBoxSoftDrinkSize.Size = new Size(466, 49);
-            comboBoxSoftDrinkSize.StartIndex = 0;
-            comboBoxSoftDrinkSize.TabIndex = 3;
-            comboBoxSoftDrinkSize.UseAccent = false;
+            maskedTextBoxCoffeName.AllowPromptAsInput = true;
+            maskedTextBoxCoffeName.AnimateReadOnly = false;
+            maskedTextBoxCoffeName.AsciiOnly = false;
+            maskedTextBoxCoffeName.BackgroundImageLayout = ImageLayout.None;
+            maskedTextBoxCoffeName.BeepOnError = false;
+            maskedTextBoxCoffeName.CutCopyMaskFormat = MaskFormat.IncludeLiterals;
+            maskedTextBoxCoffeName.Depth = 0;
+            maskedTextBoxCoffeName.Dock = DockStyle.Fill;
+            maskedTextBoxCoffeName.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            maskedTextBoxCoffeName.HidePromptOnLeave = false;
+            maskedTextBoxCoffeName.HideSelection = true;
+            maskedTextBoxCoffeName.InsertKeyMode = InsertKeyMode.Default;
+            maskedTextBoxCoffeName.LeadingIcon = null;
+            maskedTextBoxCoffeName.Location = new Point(5, 5);
+            maskedTextBoxCoffeName.Mask = "";
+            maskedTextBoxCoffeName.MaxLength = 32767;
+            maskedTextBoxCoffeName.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            maskedTextBoxCoffeName.Name = "maskedTextBoxCoffeName";
+            maskedTextBoxCoffeName.PasswordChar = '\0';
+            maskedTextBoxCoffeName.PrefixSuffix = ReaLTaiizor.Controls.MaterialMaskedTextBox.PrefixSuffixTypes.Prefix;
+            maskedTextBoxCoffeName.PrefixSuffixText = "Name";
+            maskedTextBoxCoffeName.PromptChar = '_';
+            maskedTextBoxCoffeName.ReadOnly = false;
+            maskedTextBoxCoffeName.RejectInputOnFirstFailure = false;
+            maskedTextBoxCoffeName.ResetOnPrompt = true;
+            maskedTextBoxCoffeName.ResetOnSpace = true;
+            maskedTextBoxCoffeName.RightToLeft = RightToLeft.No;
+            maskedTextBoxCoffeName.SelectedText = "";
+            maskedTextBoxCoffeName.SelectionLength = 0;
+            maskedTextBoxCoffeName.SelectionStart = 0;
+            maskedTextBoxCoffeName.ShortcutsEnabled = true;
+            maskedTextBoxCoffeName.Size = new Size(323, 48);
+            maskedTextBoxCoffeName.SkipLiterals = true;
+            maskedTextBoxCoffeName.TabIndex = 5;
+            maskedTextBoxCoffeName.TabStop = false;
+            maskedTextBoxCoffeName.Text = "Coffee";
+            maskedTextBoxCoffeName.TextAlign = HorizontalAlignment.Left;
+            maskedTextBoxCoffeName.TextMaskFormat = MaskFormat.IncludeLiterals;
+            maskedTextBoxCoffeName.TrailingIcon = null;
+            maskedTextBoxCoffeName.UseSystemPasswordChar = false;
+            maskedTextBoxCoffeName.ValidatingType = null;
             // 
-            // comboBoxSoftDrink
+            // panel24
             // 
-            comboBoxSoftDrink.AutoResize = false;
-            comboBoxSoftDrink.BackColor = Color.FromArgb(255, 255, 255);
-            comboBoxSoftDrink.Depth = 0;
-            comboBoxSoftDrink.Dock = DockStyle.Top;
-            comboBoxSoftDrink.DrawMode = DrawMode.OwnerDrawVariable;
-            comboBoxSoftDrink.DropDownHeight = 174;
-            comboBoxSoftDrink.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxSoftDrink.DropDownWidth = 121;
-            comboBoxSoftDrink.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBoxSoftDrink.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            comboBoxSoftDrink.FormattingEnabled = true;
-            comboBoxSoftDrink.Hint = "Soft Drink";
-            comboBoxSoftDrink.IntegralHeight = false;
-            comboBoxSoftDrink.ItemHeight = 43;
-            comboBoxSoftDrink.Location = new Point(5, 5);
-            comboBoxSoftDrink.MaxDropDownItems = 4;
-            comboBoxSoftDrink.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            comboBoxSoftDrink.Name = "comboBoxSoftDrink";
-            comboBoxSoftDrink.Size = new Size(466, 49);
-            comboBoxSoftDrink.StartIndex = 0;
-            comboBoxSoftDrink.TabIndex = 2;
-            comboBoxSoftDrink.UseAccent = false;
+            panel24.BackColor = SystemColors.ActiveBorder;
+            panel24.Controls.Add(comboBoxCoffeeSize);
+            panel24.EdgeColor = Color.Transparent;
+            panel24.Location = new Point(3, 133);
+            panel24.Name = "panel24";
+            panel24.Padding = new Padding(5);
+            panel24.Size = new Size(333, 59);
+            panel24.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            panel24.TabIndex = 5;
+            panel24.Text = "panel24";
+            // 
+            // comboBoxCoffeeSize
+            // 
+            comboBoxCoffeeSize.AutoResize = false;
+            comboBoxCoffeeSize.BackColor = Color.FromArgb(255, 255, 255);
+            comboBoxCoffeeSize.Depth = 0;
+            comboBoxCoffeeSize.Dock = DockStyle.Fill;
+            comboBoxCoffeeSize.DrawMode = DrawMode.OwnerDrawVariable;
+            comboBoxCoffeeSize.DropDownHeight = 174;
+            comboBoxCoffeeSize.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxCoffeeSize.DropDownWidth = 121;
+            comboBoxCoffeeSize.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            comboBoxCoffeeSize.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            comboBoxCoffeeSize.FormattingEnabled = true;
+            comboBoxCoffeeSize.Hint = "Size";
+            comboBoxCoffeeSize.IntegralHeight = false;
+            comboBoxCoffeeSize.ItemHeight = 43;
+            comboBoxCoffeeSize.Location = new Point(5, 5);
+            comboBoxCoffeeSize.MaxDropDownItems = 4;
+            comboBoxCoffeeSize.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            comboBoxCoffeeSize.Name = "comboBoxCoffeeSize";
+            comboBoxCoffeeSize.Size = new Size(323, 49);
+            comboBoxCoffeeSize.StartIndex = 0;
+            comboBoxCoffeeSize.TabIndex = 0;
             // 
             // Cocktail
             // 
@@ -779,7 +769,7 @@
             Cocktail.Location = new Point(4, 61);
             Cocktail.Name = "Cocktail";
             Cocktail.Padding = new Padding(3);
-            Cocktail.Size = new Size(482, 491);
+            Cocktail.Size = new Size(345, 491);
             Cocktail.TabIndex = 4;
             Cocktail.Text = "Add Cocktail";
             Cocktail.UseVisualStyleBackColor = true;
@@ -803,7 +793,7 @@
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 135F));
             tableLayoutPanel5.RowStyles.Add(new RowStyle());
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel5.Size = new Size(476, 485);
+            tableLayoutPanel5.Size = new Size(339, 485);
             tableLayoutPanel5.TabIndex = 1;
             // 
             // panel13
@@ -817,7 +807,7 @@
             panel13.Location = new Point(3, 333);
             panel13.Name = "panel13";
             panel13.Padding = new Padding(5);
-            panel13.Size = new Size(470, 181);
+            panel13.Size = new Size(333, 203);
             panel13.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             panel13.TabIndex = 2;
             panel13.Text = "panel13";
@@ -847,10 +837,9 @@
             customIngredient3.SelectionLength = 0;
             customIngredient3.SelectionStart = 0;
             customIngredient3.ShortcutsEnabled = true;
-            customIngredient3.Size = new Size(460, 48);
+            customIngredient3.Size = new Size(323, 48);
             customIngredient3.TabIndex = 3;
             customIngredient3.TabStop = false;
-            customIngredient3.Text = " ";
             customIngredient3.TextAlign = HorizontalAlignment.Left;
             customIngredient3.TrailingIcon = null;
             customIngredient3.UseSystemPasswordChar = false;
@@ -880,10 +869,9 @@
             customIngredient2.SelectionLength = 0;
             customIngredient2.SelectionStart = 0;
             customIngredient2.ShortcutsEnabled = true;
-            customIngredient2.Size = new Size(460, 48);
+            customIngredient2.Size = new Size(323, 48);
             customIngredient2.TabIndex = 2;
             customIngredient2.TabStop = false;
-            customIngredient2.Text = " ";
             customIngredient2.TextAlign = HorizontalAlignment.Left;
             customIngredient2.TrailingIcon = null;
             customIngredient2.UseSystemPasswordChar = false;
@@ -913,10 +901,9 @@
             customIngredient1.SelectionLength = 0;
             customIngredient1.SelectionStart = 0;
             customIngredient1.ShortcutsEnabled = true;
-            customIngredient1.Size = new Size(460, 48);
+            customIngredient1.Size = new Size(323, 48);
             customIngredient1.TabIndex = 1;
             customIngredient1.TabStop = false;
-            customIngredient1.Text = " ";
             customIngredient1.TextAlign = HorizontalAlignment.Left;
             customIngredient1.TrailingIcon = null;
             customIngredient1.UseSystemPasswordChar = false;
@@ -935,7 +922,7 @@
             panel14.Location = new Point(3, 198);
             panel14.Name = "panel14";
             panel14.Padding = new Padding(5);
-            panel14.Size = new Size(470, 129);
+            panel14.Size = new Size(333, 129);
             panel14.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             panel14.TabIndex = 1;
             panel14.Text = "panel14";
@@ -1051,7 +1038,7 @@
             panel15.Location = new Point(3, 68);
             panel15.Name = "panel15";
             panel15.Padding = new Padding(5);
-            panel15.Size = new Size(470, 59);
+            panel15.Size = new Size(333, 59);
             panel15.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             panel15.TabIndex = 3;
             panel15.Text = "panel15";
@@ -1076,7 +1063,7 @@
             comboBoxAlcohol.MaxDropDownItems = 4;
             comboBoxAlcohol.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             comboBoxAlcohol.Name = "comboBoxAlcohol";
-            comboBoxAlcohol.Size = new Size(460, 49);
+            comboBoxAlcohol.Size = new Size(323, 49);
             comboBoxAlcohol.StartIndex = 0;
             comboBoxAlcohol.TabIndex = 0;
             // 
@@ -1089,7 +1076,7 @@
             panel16.Location = new Point(3, 3);
             panel16.Name = "panel16";
             panel16.Padding = new Padding(5);
-            panel16.Size = new Size(470, 59);
+            panel16.Size = new Size(333, 59);
             panel16.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             panel16.TabIndex = 4;
             panel16.Text = "panel16";
@@ -1127,7 +1114,7 @@
             maskedTextBoxCocktailName.SelectionLength = 0;
             maskedTextBoxCocktailName.SelectionStart = 0;
             maskedTextBoxCocktailName.ShortcutsEnabled = true;
-            maskedTextBoxCocktailName.Size = new Size(460, 48);
+            maskedTextBoxCocktailName.Size = new Size(323, 48);
             maskedTextBoxCocktailName.SkipLiterals = true;
             maskedTextBoxCocktailName.TabIndex = 5;
             maskedTextBoxCocktailName.TabStop = false;
@@ -1146,7 +1133,7 @@
             panel17.Location = new Point(3, 133);
             panel17.Name = "panel17";
             panel17.Padding = new Padding(5);
-            panel17.Size = new Size(470, 59);
+            panel17.Size = new Size(333, 59);
             panel17.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             panel17.TabIndex = 5;
             panel17.Text = "panel17";
@@ -1171,7 +1158,7 @@
             comboBoxCocktailSize.MaxDropDownItems = 4;
             comboBoxCocktailSize.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             comboBoxCocktailSize.Name = "comboBoxCocktailSize";
-            comboBoxCocktailSize.Size = new Size(460, 49);
+            comboBoxCocktailSize.Size = new Size(323, 49);
             comboBoxCocktailSize.StartIndex = 0;
             comboBoxCocktailSize.TabIndex = 0;
             // 
@@ -1201,13 +1188,59 @@
             buttonAdd.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             buttonAdd.Name = "buttonAdd";
             buttonAdd.NoAccentTextColor = Color.Empty;
-            buttonAdd.Size = new Size(500, 48);
+            buttonAdd.Size = new Size(363, 48);
             buttonAdd.TabIndex = 0;
             buttonAdd.Text = "ADD";
             buttonAdd.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             buttonAdd.UseAccentColor = true;
             buttonAdd.UseVisualStyleBackColor = true;
             buttonAdd.Click += buttonAdd_Click;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.FromArgb(39, 51, 63);
+            panel5.Controls.Add(materialTabControl1);
+            panel5.Dock = DockStyle.Fill;
+            panel5.EdgeColor = Color.Transparent;
+            panel5.Location = new Point(3, 3);
+            panel5.Name = "panel5";
+            panel5.Padding = new Padding(5);
+            panel5.Size = new Size(363, 566);
+            panel5.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            panel5.TabIndex = 20;
+            panel5.Text = "panel5";
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.BackColor = Color.Transparent;
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 41.8604622F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 58.139534F));
+            tableLayoutPanel1.Controls.Add(panel4, 0, 0);
+            tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 64);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Size = new Size(897, 748);
+            tableLayoutPanel1.TabIndex = 21;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.FromArgb(39, 51, 63);
+            panel4.Controls.Add(dataGridViewMain);
+            panel4.Dock = DockStyle.Fill;
+            panel4.EdgeColor = Color.Transparent;
+            panel4.Location = new Point(378, 3);
+            panel4.MinimumSize = new Size(400, 500);
+            panel4.Name = "panel4";
+            panel4.Padding = new Padding(5);
+            panel4.Size = new Size(516, 742);
+            panel4.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            panel4.TabIndex = 21;
+            panel4.Text = "panel4";
             // 
             // dataGridViewMain
             // 
@@ -1226,57 +1259,9 @@
             dataGridViewMain.RowTemplate.Height = 25;
             dataGridViewMain.ShowCellToolTips = false;
             dataGridViewMain.ShowEditingIcon = false;
-            dataGridViewMain.Size = new Size(697, 732);
+            dataGridViewMain.Size = new Size(506, 732);
             dataGridViewMain.TabIndex = 0;
-            // 
-            // menuManagerBindingSource
-            // 
-            menuManagerBindingSource.DataSource = typeof(Backend.MenuManager);
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.FromArgb(39, 51, 63);
-            panel4.Controls.Add(dataGridViewMain);
-            panel4.Dock = DockStyle.Fill;
-            panel4.EdgeColor = Color.Transparent;
-            panel4.Location = new Point(515, 3);
-            panel4.MinimumSize = new Size(400, 500);
-            panel4.Name = "panel4";
-            panel4.Padding = new Padding(5);
-            panel4.Size = new Size(707, 742);
-            panel4.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            panel4.TabIndex = 19;
-            panel4.Text = "panel4";
-            // 
-            // panel5
-            // 
-            panel5.BackColor = Color.FromArgb(39, 51, 63);
-            panel5.Controls.Add(materialTabControl1);
-            panel5.Dock = DockStyle.Fill;
-            panel5.EdgeColor = Color.Transparent;
-            panel5.Location = new Point(3, 3);
-            panel5.Name = "panel5";
-            panel5.Padding = new Padding(5);
-            panel5.Size = new Size(500, 566);
-            panel5.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            panel5.TabIndex = 20;
-            panel5.Text = "panel5";
-            // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.BackColor = Color.Transparent;
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 41.860466F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 58.13954F));
-            tableLayoutPanel1.Controls.Add(panel4, 1, 0);
-            tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 0);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(0, 64);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(1225, 748);
-            tableLayoutPanel1.TabIndex = 21;
+            dataGridViewMain.UserDeletingRow += dataGridViewMain_UserDeletingRow;
             // 
             // tableLayoutPanel2
             // 
@@ -1294,7 +1279,8 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
-            tableLayoutPanel2.Size = new Size(506, 742);
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.Size = new Size(369, 742);
             tableLayoutPanel2.TabIndex = 20;
             // 
             // maskedTextBoxPrice
@@ -1330,7 +1316,7 @@
             maskedTextBoxPrice.SelectionLength = 0;
             maskedTextBoxPrice.SelectionStart = 0;
             maskedTextBoxPrice.ShortcutsEnabled = true;
-            maskedTextBoxPrice.Size = new Size(500, 48);
+            maskedTextBoxPrice.Size = new Size(363, 48);
             maskedTextBoxPrice.SkipLiterals = true;
             maskedTextBoxPrice.TabIndex = 22;
             maskedTextBoxPrice.TabStop = false;
@@ -1356,12 +1342,13 @@
             buttonClear.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             buttonClear.Name = "buttonClear";
             buttonClear.NoAccentTextColor = Color.Empty;
-            buttonClear.Size = new Size(500, 48);
+            buttonClear.Size = new Size(363, 48);
             buttonClear.TabIndex = 21;
             buttonClear.Text = "CLEAR";
             buttonClear.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             buttonClear.UseAccentColor = true;
             buttonClear.UseVisualStyleBackColor = true;
+            buttonClear.Click += buttonClear_Click;
             // 
             // materialCheckBox2
             // 
@@ -1632,13 +1619,195 @@
             tabPage1.Size = new Size(200, 100);
             tabPage1.TabIndex = 0;
             // 
+            // panel18
+            // 
+            panel18.BackColor = SystemColors.ActiveBorder;
+            panel18.Controls.Add(tableLayoutPanel7);
+            panel18.Dock = DockStyle.Fill;
+            panel18.EdgeColor = Color.Transparent;
+            panel18.Location = new Point(0, 64);
+            panel18.Name = "panel18";
+            panel18.Padding = new Padding(5, 5, 5, 40);
+            panel18.Size = new Size(897, 748);
+            panel18.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            panel18.TabIndex = 22;
+            panel18.Text = "panel18";
+            // 
+            // tableLayoutPanel7
+            // 
+            tableLayoutPanel7.ColumnCount = 1;
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel7.Controls.Add(panel21, 0, 1);
+            tableLayoutPanel7.Controls.Add(panel20, 0, 2);
+            tableLayoutPanel7.Controls.Add(panel22, 0, 2);
+            tableLayoutPanel7.Controls.Add(panel23, 0, 0);
+            tableLayoutPanel7.Dock = DockStyle.Fill;
+            tableLayoutPanel7.Location = new Point(5, 5);
+            tableLayoutPanel7.Name = "tableLayoutPanel7";
+            tableLayoutPanel7.RowCount = 4;
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
+            tableLayoutPanel7.Size = new Size(887, 703);
+            tableLayoutPanel7.TabIndex = 3;
+            // 
+            // panel21
+            // 
+            panel21.BackColor = SystemColors.ButtonFace;
+            panel21.Controls.Add(materialButtonSave);
+            panel21.Dock = DockStyle.Fill;
+            panel21.EdgeColor = Color.Transparent;
+            panel21.Location = new Point(3, 556);
+            panel21.Name = "panel21";
+            panel21.Padding = new Padding(5);
+            panel21.Size = new Size(881, 44);
+            panel21.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            panel21.TabIndex = 3;
+            panel21.Text = "panel21";
+            // 
+            // materialButtonSave
+            // 
+            materialButtonSave.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButtonSave.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButtonSave.Depth = 0;
+            materialButtonSave.Dock = DockStyle.Fill;
+            materialButtonSave.HighEmphasis = true;
+            materialButtonSave.Icon = null;
+            materialButtonSave.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            materialButtonSave.Location = new Point(5, 5);
+            materialButtonSave.Margin = new Padding(4, 6, 4, 6);
+            materialButtonSave.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialButtonSave.Name = "materialButtonSave";
+            materialButtonSave.NoAccentTextColor = Color.Empty;
+            materialButtonSave.Size = new Size(871, 34);
+            materialButtonSave.TabIndex = 1;
+            materialButtonSave.Text = "Save";
+            materialButtonSave.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButtonSave.UseAccentColor = false;
+            materialButtonSave.UseVisualStyleBackColor = true;
+            materialButtonSave.Click += materialButtonSave_Click;
+            // 
+            // panel20
+            // 
+            panel20.BackColor = SystemColors.ButtonFace;
+            panel20.Controls.Add(materialButtonLoad);
+            panel20.Dock = DockStyle.Fill;
+            panel20.EdgeColor = Color.Transparent;
+            panel20.Location = new Point(3, 606);
+            panel20.Name = "panel20";
+            panel20.Padding = new Padding(5);
+            panel20.Size = new Size(881, 44);
+            panel20.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            panel20.TabIndex = 2;
+            panel20.Text = "panel20";
+            // 
+            // materialButtonLoad
+            // 
+            materialButtonLoad.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButtonLoad.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButtonLoad.Depth = 0;
+            materialButtonLoad.Dock = DockStyle.Fill;
+            materialButtonLoad.HighEmphasis = true;
+            materialButtonLoad.Icon = null;
+            materialButtonLoad.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            materialButtonLoad.Location = new Point(5, 5);
+            materialButtonLoad.Margin = new Padding(4, 6, 4, 6);
+            materialButtonLoad.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialButtonLoad.Name = "materialButtonLoad";
+            materialButtonLoad.NoAccentTextColor = Color.Empty;
+            materialButtonLoad.Size = new Size(871, 34);
+            materialButtonLoad.TabIndex = 2;
+            materialButtonLoad.Text = "Load";
+            materialButtonLoad.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButtonLoad.UseAccentColor = false;
+            materialButtonLoad.UseVisualStyleBackColor = true;
+            materialButtonLoad.Click += materialButtonLoad_Click;
+            // 
+            // panel22
+            // 
+            panel22.BackColor = SystemColors.ButtonFace;
+            panel22.Controls.Add(materialButtonExport);
+            panel22.Dock = DockStyle.Fill;
+            panel22.EdgeColor = Color.Transparent;
+            panel22.Location = new Point(3, 656);
+            panel22.Name = "panel22";
+            panel22.Padding = new Padding(5);
+            panel22.Size = new Size(881, 44);
+            panel22.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            panel22.TabIndex = 4;
+            panel22.Text = "panel22";
+            // 
+            // materialButtonExport
+            // 
+            materialButtonExport.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButtonExport.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButtonExport.Depth = 0;
+            materialButtonExport.Dock = DockStyle.Fill;
+            materialButtonExport.HighEmphasis = true;
+            materialButtonExport.Icon = null;
+            materialButtonExport.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            materialButtonExport.Location = new Point(5, 5);
+            materialButtonExport.Margin = new Padding(4, 6, 4, 6);
+            materialButtonExport.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialButtonExport.Name = "materialButtonExport";
+            materialButtonExport.NoAccentTextColor = Color.Empty;
+            materialButtonExport.Size = new Size(871, 34);
+            materialButtonExport.TabIndex = 0;
+            materialButtonExport.Text = "Export PDF";
+            materialButtonExport.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButtonExport.UseAccentColor = false;
+            materialButtonExport.UseVisualStyleBackColor = true;
+            materialButtonExport.Click += materialButtonExport_Click;
+            // 
+            // panel23
+            // 
+            panel23.BackColor = SystemColors.ControlLight;
+            panel23.Controls.Add(pictureBox1);
+            panel23.Controls.Add(materialLabel1);
+            panel23.Dock = DockStyle.Fill;
+            panel23.EdgeColor = Color.Transparent;
+            panel23.Location = new Point(3, 3);
+            panel23.Name = "panel23";
+            panel23.Padding = new Padding(5);
+            panel23.Size = new Size(881, 547);
+            panel23.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            panel23.TabIndex = 5;
+            panel23.Text = "panel23";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = Properties.Resources.burger;
+            pictureBox1.Location = new Point(713, 379);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(160, 160);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            // 
+            // materialLabel1
+            // 
+            materialLabel1.Depth = 0;
+            materialLabel1.Dock = DockStyle.Fill;
+            materialLabel1.Font = new Font("Roboto", 34F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialLabel1.FontType = ReaLTaiizor.Manager.MaterialSkinManager.FontType.H4;
+            materialLabel1.Location = new Point(5, 5);
+            materialLabel1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialLabel1.Name = "materialLabel1";
+            materialLabel1.Size = new Size(871, 537);
+            materialLabel1.TabIndex = 0;
+            materialLabel1.Text = "Welcome to the Menu Manager!\r\n\r\nIt's time to start assemble your menu.\r\n\r\nYou can always save and load,\r\nbut to export as PDF you must have at least 3 items of each category.\r\n";
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(1228, 815);
+            ClientSize = new Size(900, 815);
             Controls.Add(tableLayoutPanel1);
+            Controls.Add(panel18);
             DrawerShowIconsWhenHidden = true;
             DrawerTabControl = materialTabControl1;
             MinimumSize = new Size(900, 815);
@@ -1648,8 +1817,6 @@
             FormClosing += FormMain_FormClosing;
             Load += FormMain_Load;
             materialTabControl1.ResumeLayout(false);
-            Home.ResumeLayout(false);
-            Home.PerformLayout();
             Food.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
             panel7.ResumeLayout(false);
@@ -1658,13 +1825,13 @@
             panel9.ResumeLayout(false);
             panel10.ResumeLayout(false);
             Coffee.ResumeLayout(false);
-            panel1.ResumeLayout(false);
+            tableLayoutPanel6.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            SoftDrink.ResumeLayout(false);
-            panel6.ResumeLayout(false);
+            panel1.ResumeLayout(false);
             panel8.ResumeLayout(false);
-            panel8.PerformLayout();
+            panel19.ResumeLayout(false);
+            panel24.ResumeLayout(false);
             Cocktail.ResumeLayout(false);
             tableLayoutPanel5.ResumeLayout(false);
             panel13.ResumeLayout(false);
@@ -1673,17 +1840,27 @@
             panel15.ResumeLayout(false);
             panel16.ResumeLayout(false);
             panel17.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridViewMain).EndInit();
-            ((System.ComponentModel.ISupportInitialize)menuManagerBindingSource).EndInit();
-            panel4.ResumeLayout(false);
             panel5.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewMain).EndInit();
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
             tableLayoutPanel4.ResumeLayout(false);
             panel11.ResumeLayout(false);
             panel12.ResumeLayout(false);
             panel12.PerformLayout();
+            panel18.ResumeLayout(false);
+            tableLayoutPanel7.ResumeLayout(false);
+            panel21.ResumeLayout(false);
+            panel21.PerformLayout();
+            panel20.ResumeLayout(false);
+            panel20.PerformLayout();
+            panel22.ResumeLayout(false);
+            panel22.PerformLayout();
+            panel23.ResumeLayout(false);
+            panel23.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -1694,25 +1871,10 @@
         private TabPage Food;
         private ImageList menuIcons;
         private TabPage Coffee;
-        private TabPage SoftDrink;
-        private DataGridView dataGridViewMain;
-        private ReaLTaiizor.Controls.Panel panel1;
-        private ReaLTaiizor.Controls.MaterialComboBox comboBoxMilkType;
-        private ReaLTaiizor.Controls.MaterialComboBox comboBoxCoffeeType;
-        private ReaLTaiizor.Controls.MaterialSwitch switchCoffeeIce;
-        private ReaLTaiizor.Controls.MaterialSwitch switchDecaf;
-        private ReaLTaiizor.Controls.Panel panel2;
         private ReaLTaiizor.Controls.Panel panel3;
         private ReaLTaiizor.Controls.MaterialButton buttonAdd;
-        private ReaLTaiizor.Controls.Panel panel4;
         private ReaLTaiizor.Controls.Panel panel5;
         private TableLayoutPanel tableLayoutPanel1;
-        private ReaLTaiizor.Controls.Panel panel6;
-        private ReaLTaiizor.Controls.Panel panel8;
-        private ReaLTaiizor.Controls.MaterialSwitch switchSoftDrinkIce;
-        private ReaLTaiizor.Controls.MaterialSwitch switchCarbonated;
-        private ReaLTaiizor.Controls.MaterialComboBox comboBoxSoftDrinkSize;
-        private ReaLTaiizor.Controls.MaterialComboBox comboBoxSoftDrink;
         private TableLayoutPanel tableLayoutPanel2;
         private ReaLTaiizor.Controls.MaterialButton buttonClear;
         private ReaLTaiizor.Controls.MaterialMaskedTextBox maskedTextBoxPrice;
@@ -1732,8 +1894,6 @@
         private ReaLTaiizor.Controls.MaterialTextBoxEdit customTopping1;
         private ReaLTaiizor.Controls.Panel panel10;
         private ReaLTaiizor.Controls.MaterialMaskedTextBox maskedTextBoxBurgerName;
-        private BindingSource menuManagerBindingSource;
-        private ReaLTaiizor.Controls.MaterialButton materialButton1;
         private TabPage Cocktail;
         private TableLayoutPanel tableLayoutPanel5;
         private ReaLTaiizor.Controls.Panel panel14;
@@ -1764,5 +1924,30 @@
         private ReaLTaiizor.Controls.MaterialTextBoxEdit customIngredient1;
         private ReaLTaiizor.Controls.MaterialComboBox comboBoxCocktailSize;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit customIngredient3;
+        private ReaLTaiizor.Controls.Panel panel4;
+        private DataGridView dataGridViewMain;
+        private ReaLTaiizor.Controls.Panel panel18;
+        private TableLayoutPanel tableLayoutPanel7;
+        private ReaLTaiizor.Controls.Panel panel21;
+        private ReaLTaiizor.Controls.MaterialButton materialButtonSave;
+        private ReaLTaiizor.Controls.Panel panel20;
+        private ReaLTaiizor.Controls.MaterialButton materialButtonLoad;
+        private ReaLTaiizor.Controls.Panel panel22;
+        private ReaLTaiizor.Controls.MaterialButton materialButtonExport;
+        private ReaLTaiizor.Controls.Panel panel23;
+        private ReaLTaiizor.Controls.MaterialLabel materialLabel1;
+        private PictureBox pictureBox1;
+        private TableLayoutPanel tableLayoutPanel6;
+        private ReaLTaiizor.Controls.Panel panel8;
+        private ReaLTaiizor.Controls.MaterialComboBox comboBoxMilk;
+        private ReaLTaiizor.Controls.Panel panel19;
+        private ReaLTaiizor.Controls.MaterialMaskedTextBox maskedTextBoxCoffeName;
+        private ReaLTaiizor.Controls.Panel panel24;
+        private ReaLTaiizor.Controls.MaterialComboBox comboBoxCoffeeSize;
+        private ReaLTaiizor.Controls.Panel panel1;
+        private ReaLTaiizor.Controls.MaterialComboBox comboBoxBeans;
+        private ReaLTaiizor.Controls.Panel panel2;
+        private ReaLTaiizor.Controls.MaterialCheckBox checkBoxStrong;
+        private ReaLTaiizor.Controls.MaterialCheckBox checkBoxCold;
     }
 }

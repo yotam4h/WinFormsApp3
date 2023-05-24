@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace WinFormsApp3.Backend.Enums
 {
-    public enum ECourse
+    public enum EBeans
     {
-        Appetizer,
-        MainCourse,
-        Dessert
+        Arabica,
+        Robusta,
+        Liberica,
+        Excelsa
     }
 }

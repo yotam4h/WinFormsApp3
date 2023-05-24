@@ -35,15 +35,24 @@ namespace WinFormsApp3.Backend
 
         public static void SaveMenuItems()
         {
+            SaveMenuItems("MyFile.bin");
+        }
+
+        public static void SaveMenuItems(string path)
+        {
             var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
-            Stream stream = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            Stream stream = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None);
             binaryFormatter.Serialize(stream, MenuManager.GetMenuItems());
             stream.Close();
         }
 
         public static void LoadMenuItems()
         {
-            Stream stream = File.Open("MyFile.bin", FileMode.Open);
+            LoadMenuItems("MyFile.bin");
+        }
+        public static void LoadMenuItems(string path)
+        {
+            Stream stream = File.Open(path, FileMode.Open);
             var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
             menuItems = (BindingList<MenuItem>)binaryFormatter.Deserialize(stream);
             stream.Close();

@@ -11,9 +11,7 @@ namespace WinFormsApp3.Backend.Models
 {
     [Serializable]
     public class Cocktail : Drink
-    {    //common ingredients
-        public BitArray IngredientFlags { get; set; }
-
+    {   
         //User added ingredients
         public BindingList<string> CustomIngredient { get; set; }
 
@@ -22,44 +20,43 @@ namespace WinFormsApp3.Backend.Models
 
         public Cocktail(string name, decimal price, string size, string alcohol) : base(name, price, size)
         {
-            IngredientFlags = new BitArray(6);
             CustomIngredient = new BindingList<string>();
             Alcohol = alcohol;
         }
 
         public bool Lime_juice
         {
-            get { return IngredientFlags[0]; }
-            set { IngredientFlags[0] = value; }
+            get;
+            set;
         }
 
         public bool Soda
         {
-            get { return IngredientFlags[1]; }
-            set { IngredientFlags[1] = value; }
+            get;
+            set;
         }
 
         public bool Mint
         {
-            get { return IngredientFlags[2]; }
-            set { IngredientFlags[2] = value; }
+            get;
+            set;
         }
 
         public bool Syrup
         {
-            get { return IngredientFlags[3]; }
-            set { IngredientFlags[3] = value; }
+            get;
+            set;
         }
         public bool Sugar_water
         {
-            get { return IngredientFlags[4]; }
-            set { IngredientFlags[4] = value; }
+            get;
+            set;
         }
 
         public bool Ice
         {
-            get { return IngredientFlags[5]; }
-            set { IngredientFlags[5] = value; }
+            get;
+            set;
         }
 
         public void AddIngredient(string ingredient)
@@ -90,9 +87,43 @@ namespace WinFormsApp3.Backend.Models
             };
             return Price;
         }
+
         public override string ToString()
         {
-            return $"{Name} - {Size} - {Price:C}";
+            string text = Name + " - " + Alcohol;
+            if(Lime_juice)
+            {
+                text += " - Lime juice";
+            }
+            if (Soda)
+            {
+                text += " - Soda";
+            }
+            if (Mint)
+            {
+                text += " - Mint";
+            }
+            if (Syrup)
+            {
+                text += " - Syrup";
+            }
+            if (Sugar_water)
+            {
+                text += " - Sugar water";
+            }
+            if (Ice)
+            {
+                text += " - Ice";
+            }
+            if (CustomIngredient.Count > 0)
+            {
+                text += " - ";
+                text += string.Join(", ", CustomIngredient);
+            }
+            text += " - " + Size + " - " + Price;
+
+
+            return text;
         }
     }
 }
