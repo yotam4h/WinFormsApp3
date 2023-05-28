@@ -10,7 +10,6 @@ namespace WinFormsApp3.Backend.Models
     [Serializable]
     public class Coffee : Drink
     {
-        // maybe add cold\hot, how many espresso shots
         public string Milk { get; set; }
         public string Beans { get; set; }
         public string Temp { get; set; }
@@ -22,18 +21,19 @@ namespace WinFormsApp3.Backend.Models
             Beans = beans;
             Temp = temp;
             Strong = strong;
-        } 
-        
+        }
+
         public override string ToString()
         {
-            //return base.ToString() + " " + Milk;
-            /*if(Strong)
-                return base.ToString() + " " + Beans + " " + Milk + " " + Strong + " " + Temp;
-            else
-                return base.ToString() + " " + Beans + " " + Milk + " " + Temp;
-*/
-            string text = Name + " - ";
-            
+            string text = Name + " - " + Size + " - ";
+
+            if (Milk != "None") { text += Milk + " Milk - "; }
+            text += Beans + " - ";
+            if (Strong) { text += "Strong - "; }
+            if (Temp != "Hot") {text += Temp + " - "; }
+            text += $"{Price:C}";
+
+            return text;
         }
     }
 }

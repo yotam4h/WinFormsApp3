@@ -1,5 +1,8 @@
+using iText.IO.Font.Constants;
+using iText.Kernel.Font;
 using iText.Kernel.Pdf;
 using iText.Layout;
+using iText.Layout.Borders;
 using iText.Layout.Element;
 using iText.Layout.Properties;
 using Org.BouncyCastle.Asn1.Cms;
@@ -48,8 +51,6 @@ namespace WinFormsApp3
                                                                       lightPrimary: Color.FromArgb(149, 192, 163), // shades
                                                                       accent: Color.FromArgb(73, 106, 129), // accent
                                                                       textShade: MaterialTextShade.WHITE);
-
-            //FormClosing += new FormClosingEventHandler(MenuManager.SaveMenuItems);
         }
 
         private void FormMain_Load(object sender, EventArgs e)
@@ -58,7 +59,10 @@ namespace WinFormsApp3
             buttonAdd.Hide();
             maskedTextBoxPrice.Hide();
             dataGridViewMain.Hide();
-            MenuManager.LoadMenuItems();
+
+            // if file exists, load it
+            if (MenuManager.FileExists())
+                MenuManager.LoadMenuItems();
 
             dataGridViewMain.DataSource = MenuManager.GetMenuItems();
             comboBoxMilk.DataSource = Enum.GetValues(typeof(EMilk));
@@ -133,18 +137,23 @@ namespace WinFormsApp3
 
         private void AddBurger()
         {
+            if (!ValidatePrice())
+            {
+                maskedTextBoxPrice.Text = string.Empty;
+                return;
+            }
+
             try
             {
-                var price = decimal.Parse(maskedTextBoxPrice.Text);
-                var item = new Burger(maskedTextBoxBurgerName.Text, price);
+                var item = new Burger(maskedTextBoxBurgerName.Text, decimal.Parse(maskedTextBoxPrice.Text));
                 if (comboBoxMeat.SelectedItem != null) { item.MeatType = comboBoxMeat.SelectedItem.ToString(); }
                 if (checkBoxLettuce.Checked) { item.Lettuce = true; }
                 if (checkBoxTomato.Checked) { item.Tomato = true; }
                 if (checkBoxOnion.Checked) { item.Onion = true; }
                 if (checkBoxPickle.Checked) { item.Pickle = true; }
-                if (customTopping1.Text.Length > 1) { item.CustomToppings.Add(customTopping1.Text); }
-                if (customTopping2.Text.Length > 1) { item.CustomToppings.Add(customTopping2.Text); }
-                if (customTopping3.Text.Length > 1) { item.CustomToppings.Add(customTopping3.Text); }
+                if (!customTopping1.Text.Equals(string.Empty)) { item.CustomToppings.Add(customTopping1.Text); }
+                if (!customTopping2.Text.Equals(string.Empty)) { item.CustomToppings.Add(customTopping2.Text); }
+                if (!customTopping3.Text.Equals(string.Empty)) { item.CustomToppings.Add(customTopping3.Text); }
 
                 MenuManager.AddMenuItem(item);
                 dataGridViewMain.DataSource = MenuManager.GetMenuItemsBy<Burger>();
@@ -161,9 +170,15 @@ namespace WinFormsApp3
 
         private void AddCoffee()
         {
+
+            if (!ValidatePrice())
+            {
+                maskedTextBoxPrice.Text = string.Empty;
+                return;
+            }
+
             try
             {
-                decimal price = decimal.Parse(maskedTextBoxPrice.Text);
                 var strong = checkBoxStrong.Checked;
                 var size = comboBoxCoffeeSize.SelectedItem.ToString();
                 var milk = comboBoxMilk.SelectedItem.ToString();
@@ -177,7 +192,7 @@ namespace WinFormsApp3
                 {
                     temp = "Hot";
                 }
-                var item = new Coffee(maskedTextBoxCoffeName.Text, price, size, milk, bean, temp, strong);
+                var item = new Coffee(maskedTextBoxCoffeName.Text, decimal.Parse(maskedTextBoxPrice.Text), size, milk, bean, temp, strong);
                 MenuManager.AddMenuItem(item);
                 dataGridViewMain.DataSource = MenuManager.GetMenuItemsBy<Coffee>();
                 MaterialSnackBar AddedItemMessage = new("Item Added!");
@@ -193,22 +208,27 @@ namespace WinFormsApp3
 
         private void AddCocktail()
         {
+            if (!ValidatePrice())
+            {
+                maskedTextBoxPrice.Text = string.Empty;
+                return;
+            }
+
             try
             {
-                decimal price = decimal.Parse(maskedTextBoxPrice.Text);
                 var alcohol = comboBoxAlcohol.SelectedItem.ToString();
                 var size = comboBoxCocktailSize.SelectedItem.ToString();
                 var name = maskedTextBoxCocktailName.Text;
-                Cocktail item = new(name, price, size, alcohol);
+                Cocktail item = new(name, decimal.Parse(maskedTextBoxPrice.Text), size, alcohol);
                 if (checkBoxLimejuice.Checked) { item.Lime_juice = true; }
                 if (checkBoxIce.Checked) { item.Ice = true; }
                 if (checkBoxMint.Checked) { item.Mint = true; }
                 if (checkBoxSoda.Checked) { item.Soda = true; }
                 if (checkBoxSyrup.Checked) { item.Syrup = true; }
                 if (checkBoxSugarWater.Checked) { item.Sugar_water = true; }
-                if (customIngredient1.Text.Length > 2) { item.AddIngredient(customIngredient1.Text); }
-                if (customIngredient2.Text.Length > 2) { item.AddIngredient(customIngredient2.Text); }
-                if (customIngredient3.Text.Length > 2) { item.AddIngredient(customIngredient3.Text); }
+                if (!customIngredient1.Text.Equals(string.Empty)) { item.AddIngredient(customIngredient1.Text); }
+                if (!customIngredient2.Text.Equals(string.Empty)) { item.AddIngredient(customIngredient2.Text); }
+                if (!customIngredient3.Text.Equals(string.Empty)) { item.AddIngredient(customIngredient3.Text); }
 
                 MenuManager.AddMenuItem(item);
                 dataGridViewMain.DataSource = MenuManager.GetMenuItemsBy<Cocktail>();
@@ -225,22 +245,14 @@ namespace WinFormsApp3
 
         private void maskedTextBoxPrice_Leave(object sender, EventArgs e)
         {
-            try
-            {
-                decimal.Parse(maskedTextBoxPrice.Text);
-            }
-            catch (Exception ex)
-            {
-                MaterialSnackBar SnackBarMessage = new("Price must be decimal!");
-                SnackBarMessage.Show(this);
-            }
+            ValidatePrice();
         }
 
         private void materialButtonSave_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();
-            saveFileDialog1.Filter = "model files (*.mdl)|*.mdl|All files (*.*)|*.*";
+            saveFileDialog1.Filter = "binary (*.bin)|*.bin|All files (*.*)|*.*";
             saveFileDialog1.FilterIndex = 1;
             saveFileDialog1.RestoreDirectory = true;
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
@@ -253,7 +265,7 @@ namespace WinFormsApp3
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();// + "..\\myModels";
-            openFileDialog1.Filter = "model files (*.mdl)|*.mdl|All files (*.*)|*.*";
+            openFileDialog1.Filter = "binary (*.bin)|*.bin|All files (*.*)|*.*";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.RestoreDirectory = true;
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -290,47 +302,86 @@ namespace WinFormsApp3
                         {
                             using (Document doc = new Document(PdfDoc))
                             {
+
+                                Div page = new Div();
+                                page.SetBackgroundColor(iText.Kernel.Colors.ColorConstants.LIGHT_GRAY);
+                                page.SetBorder(new SolidBorder(iText.Kernel.Colors.ColorConstants.BLACK, 2, 0.5F));
+                                page.SetBorderRadius(new BorderRadius(5));
+                                page.SetMargin(10);
+                                page.SetPadding(10);
+                                page.SetTextAlignment(TextAlignment.CENTER);
+                                page.SetFont(PdfFontFactory.CreateFont(StandardFonts.HELVETICA));
+
+                                Style items = new Style();
+                                items.SetBackgroundColor(iText.Kernel.Colors.ColorConstants.WHITE);
+                                items.SetBorderRadius(new BorderRadius(5));
+                                items.SetBorder(new SolidBorder(iText.Kernel.Colors.ColorConstants.BLACK, 2, 0.5F));
+                                items.SetMargin(10);
+                                items.SetPadding(10);
+                                items.SetTextAlignment(TextAlignment.LEFT);
+                                items.SetFontSize(10);
+
+                                Style header1 = new Style();
+                                header1.SetBold();
+                                header1.SetFontSize(12);
+                                header1.SetTextAlignment(TextAlignment.CENTER);
+
+                                Style header2 = new Style();
+                                header2.SetBold();
+                                header2.SetTextAlignment(TextAlignment.CENTER);
+
+
                                 Paragraph header = new Paragraph("Menu");
-                                header.SetBold();
-                                header.SetUnderline();
-                                header.SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER);
-                                doc.Add(header);
+                                header.AddStyle(header1);
+
+
+                                Div burgerdiv = new Div();
+                                burgerdiv.AddStyle(items);
+
 
                                 Paragraph burgerhead = new Paragraph("Burgers");
-                                burgerhead.SetBold();
-                                burgerhead.SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER);
-                                doc.Add(burgerhead);
+                                burgerhead.AddStyle(header2);
+                                burgerdiv.Add(burgerhead);
 
                                 foreach (var item in MenuManager.GetMenuItemsBy<Burger>())
                                 {
                                     Paragraph burger = new Paragraph(item.ToString());
-                                    burger.SetFontSize(10);
-                                    doc.Add(burger);
+                                    burgerdiv.Add(burger);
                                 }
+
+                                Div cocktaildiv = new Div();
+                                cocktaildiv.AddStyle(items);
 
                                 Paragraph cocktailhead = new Paragraph("Cocktails");
                                 cocktailhead.SetBold();
-                                cocktailhead.SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER);
-                                doc.Add(cocktailhead);
+                                cocktailhead.SetTextAlignment(TextAlignment.CENTER);
+                                cocktaildiv.Add(cocktailhead);
 
                                 foreach (var item in MenuManager.GetMenuItemsBy<Cocktail>())
                                 {
                                     Paragraph cocktail = new Paragraph(item.ToString());
-                                    cocktail.SetFontSize(10);
-                                    doc.Add(cocktail);
+                                    cocktaildiv.Add(cocktail);
                                 }
 
+                                Div coffeediv = new Div();
+                                coffeediv.AddStyle(items);
+
                                 Paragraph coffeehead = new Paragraph("Coffee");
-                                coffeehead.SetBold();
-                                coffeehead.SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER);
-                                doc.Add(coffeehead);
+                                coffeehead.AddStyle(header2);
+                                coffeediv.Add(coffeehead);
 
                                 foreach (var item in MenuManager.GetMenuItemsBy<Coffee>())
                                 {
                                     Paragraph coffee = new Paragraph(item.ToString());
-                                    coffee.SetFontSize(10);
-                                    doc.Add(coffee);
+                                    coffeediv.Add(coffee);
                                 }
+
+                                page.Add(header);
+                                page.Add(burgerdiv);
+                                page.Add(cocktaildiv);
+                                page.Add(coffeediv);
+
+                                doc.Add(page);
                             }
                         }
                     }
@@ -361,16 +412,16 @@ namespace WinFormsApp3
 
         private void ClearBurgerTab()
         {
-            customTopping1.Text = "";
-            customTopping2.Text = "";
-            customTopping3.Text = "";
+            customTopping1.Text = string.Empty;
+            customTopping2.Text = string.Empty;
+            customTopping3.Text = string.Empty;
             checkBoxPickle.Checked = false;
             checkBoxTomato.Checked = false;
             checkBoxLettuce.Checked = false;
             checkBoxOnion.Checked = false;
             comboBoxMeat.SelectedIndex = 0;
             maskedTextBoxBurgerName.Text = "Burger";
-            maskedTextBoxPrice.Text = "";
+            maskedTextBoxPrice.Text = string.Empty;
 
         }
 
@@ -381,17 +432,17 @@ namespace WinFormsApp3
             comboBoxBeans.SelectedIndex = 0;
             comboBoxMilk.SelectedIndex = 0;
             maskedTextBoxCoffeName.Text = "Coffee";
-            maskedTextBoxPrice.Text = "";
+            maskedTextBoxPrice.Text = string.Empty;
             comboBoxCoffeeSize.SelectedIndex = 0;
         }
 
         private void ClearCocktailTab()
         {
-            customIngredient1.Text = "";
-            customIngredient2.Text = "";
-            customIngredient3.Text = "";
+            customIngredient1.Text = string.Empty;
+            customIngredient2.Text = string.Empty;
+            customIngredient3.Text = string.Empty;
             maskedTextBoxCocktailName.Text = "Cocktail";
-            maskedTextBoxPrice.Text = "";
+            maskedTextBoxPrice.Text = string.Empty;
             comboBoxCocktailSize.SelectedIndex = 0;
             checkBoxIce.Checked = false;
             checkBoxSugarWater.Checked = false;
@@ -400,6 +451,21 @@ namespace WinFormsApp3
             checkBoxSoda.Checked = false;
             checkBoxLimejuice.Checked = false;
             comboBoxAlcohol.SelectedIndex = 0;
+        }
+
+        private bool ValidatePrice()
+        {
+            try
+            {
+                decimal.Parse(maskedTextBoxPrice.Text);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MaterialSnackBar SnackBarMessage = new("Price must be decimal!");
+                SnackBarMessage.Show(this);
+                return false;
+            }
         }
     }
 }

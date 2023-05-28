@@ -49,36 +49,15 @@ namespace WinFormsApp3.Backend.Models
             string text = Name;
 
             // Add toppings
-            if (Tomato || Lettuce || Onion || Pickle)
-            {
-                text += " - ";
-            }
-            if (Tomato)
-            {
-                text += "Tomato, ";
-            }
-            if (Lettuce)
-            {
-                text += "Lettuce, ";
-            }
-            if (Onion)
-            {
-                text += "Onion, ";
-            }
-            if (Pickle)
-            {
-                text += "Pickle, ";
-            }
-            if (CustomToppings.Count > 0)
-            {
-                text += string.Join(", ", CustomToppings);
-            }
+            if (Tomato || Lettuce || Onion || Pickle) { text += " - "; }
+            if (Tomato) { text += "Tomato, "; }
+            if (Lettuce) { text += "Lettuce, "; }
+            if (Onion) { text += "Onion, "; }
+            if (Pickle) { text += "Pickle, "; }
+            if (CustomToppings.Count > 0) { text += string.Join(", ", CustomToppings); }
 
             // remove the last comma
-            if (text.EndsWith(", "))
-            {
-                text = text.Substring(0,text.Length - 2);
-            }
+            if (text.EndsWith(", ")) { text = text.Substring(0,text.Length - 2); }
 
             text += $" - {Price:C}";
 

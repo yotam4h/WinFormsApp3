@@ -73,9 +73,9 @@ namespace WinFormsApp3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cocktail_100 {
+        internal static System.Drawing.Bitmap cafe_24px {
             get {
-                object obj = ResourceManager.GetObject("cocktail-100", resourceCulture);
+                object obj = ResourceManager.GetObject("cafe_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace WinFormsApp3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cocktail_50 {
+        internal static System.Drawing.Bitmap hamburger_24px {
             get {
-                object obj = ResourceManager.GetObject("cocktail-50", resourceCulture);
+                object obj = ResourceManager.GetObject("hamburger_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace WinFormsApp3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap fat_man_100 {
+        internal static System.Drawing.Bitmap home_page_24px {
             get {
-                object obj = ResourceManager.GetObject("fat-man-100", resourceCulture);
+                object obj = ResourceManager.GetObject("home_page_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,19 +113,9 @@ namespace WinFormsApp3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap fat_man_24 {
+        internal static System.Drawing.Bitmap soda_bottle_24px {
             get {
-                object obj = ResourceManager.GetObject("fat-man-24", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap fat_man_50 {
-            get {
-                object obj = ResourceManager.GetObject("fat-man-50", resourceCulture);
+                object obj = ResourceManager.GetObject("soda_bottle_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

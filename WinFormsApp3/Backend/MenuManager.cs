@@ -35,7 +35,7 @@ namespace WinFormsApp3.Backend
 
         public static void SaveMenuItems()
         {
-            SaveMenuItems("MyFile.bin");
+            SaveMenuItems("data.bin");
         }
 
         public static void SaveMenuItems(string path)
@@ -48,7 +48,7 @@ namespace WinFormsApp3.Backend
 
         public static void LoadMenuItems()
         {
-            LoadMenuItems("MyFile.bin");
+            LoadMenuItems("data.bin");
         }
         public static void LoadMenuItems(string path)
         {
@@ -75,6 +75,11 @@ namespace WinFormsApp3.Backend
                 child.Add((T)element);
             }
             return child;
+        }
+
+        internal static bool FileExists()
+        {
+            return File.Exists("data.bin");
         }
     }
 }
