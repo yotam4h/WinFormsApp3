@@ -18,7 +18,6 @@ namespace WinFormsApp3.Backend.Models
             Price = price;
         }
 
-        public abstract decimal ComputePrice();
         public override string ToString()
         {
             return $"{Name} - {Price:C}";

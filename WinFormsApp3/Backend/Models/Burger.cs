@@ -20,7 +20,7 @@ namespace WinFormsApp3.Backend.Models
         // Paid toppings
         public BindingList<string> CustomToppings { get; set; }
         // Meat Type
-        public string ?MeatType { get; set; }
+        public string? MeatType { get; set; }
 
         public Burger(string name, decimal price) : base(name, price)
         {
@@ -44,48 +44,45 @@ namespace WinFormsApp3.Backend.Models
             }
         }
 
-        public override decimal ComputePrice()
-        {
-            return Price;
-        }
-
         public override string ToString()
         {
-            string customToppings = "";
-                foreach (var item in CustomToppings)
-                {
-                        customToppings += item + ", ";   
-                }
+            string text = Name;
 
-            // Remove the last comma
-            if (customToppings.Length > 2)
+            // Add toppings
+            if (Tomato || Lettuce || Onion || Pickle)
             {
-                customToppings = customToppings.Remove(customToppings.Length - 2);
+                text += " - ";
             }
-
-            string freeToppings = "";
             if (Tomato)
             {
-                freeToppings += "Tomato, ";
+                text += "Tomato, ";
             }
             if (Lettuce)
             {
-                freeToppings += "Lettuce, ";
+                text += "Lettuce, ";
             }
             if (Onion)
             {
-                freeToppings += "Onion, ";
+                text += "Onion, ";
             }
             if (Pickle)
             {
-                freeToppings += "Pickle, ";
+                text += "Pickle, ";
             }
-            // Remove the last comma
-            if (freeToppings.Length > 2)
+            if (CustomToppings.Count > 0)
             {
-                freeToppings = freeToppings.Remove(freeToppings.Length - 2);
+                text += string.Join(", ", CustomToppings);
             }
-            return $"{Name} - {freeToppings} - {customToppings} - {Price:C}";
+
+            // remove the last comma
+            if (text.EndsWith(", "))
+            {
+                text = text.Substring(0,text.Length - 2);
+            }
+
+            text += $" - {Price:C}";
+
+            return text;
 
         }
 

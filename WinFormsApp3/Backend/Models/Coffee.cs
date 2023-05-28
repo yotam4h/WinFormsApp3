@@ -22,20 +22,18 @@ namespace WinFormsApp3.Backend.Models
             Beans = beans;
             Temp = temp;
             Strong = strong;
-        }
-
-        public override decimal ComputePrice()
-        {
-            return Price;
-        }     
+        } 
         
         public override string ToString()
         {
             //return base.ToString() + " " + Milk;
-            if(Strong)
+            /*if(Strong)
                 return base.ToString() + " " + Beans + " " + Milk + " " + Strong + " " + Temp;
             else
                 return base.ToString() + " " + Beans + " " + Milk + " " + Temp;
+*/
+            string text = Name + " - ";
+            
         }
     }
 }

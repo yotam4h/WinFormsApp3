@@ -135,7 +135,7 @@ namespace WinFormsApp3
         {
             try
             {
-                decimal price = decimal.Parse(maskedTextBoxPrice.Text);
+                var price = decimal.Parse(maskedTextBoxPrice.Text);
                 var item = new Burger(maskedTextBoxBurgerName.Text, price);
                 if (comboBoxMeat.SelectedItem != null) { item.MeatType = comboBoxMeat.SelectedItem.ToString(); }
                 if (checkBoxLettuce.Checked) { item.Lettuce = true; }

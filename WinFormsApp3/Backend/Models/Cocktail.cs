@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -76,52 +77,53 @@ namespace WinFormsApp3.Backend.Models
             }
         }
 
-        public override decimal ComputePrice()
-        {
-            Price *= Size switch
-            {
-                "Small" => 1m,
-                "Medium" => 1.5m,
-                "Large" => 2m,
-                _ => throw new Exception("Invalid size"),
-            };
-            return Price;
-        }
+        
 
         public override string ToString()
         {
             string text = Name + " - " + Alcohol;
+
+            // Add ingredients
+            if(Lime_juice || Soda || Mint || Syrup || Sugar_water || Ice)
+            {
+                text += " - ";
+            }
             if(Lime_juice)
             {
-                text += " - Lime juice";
+                text += "Lime juice, ";
             }
             if (Soda)
             {
-                text += " - Soda";
+                text += "Soda, ";
             }
             if (Mint)
             {
-                text += " - Mint";
+                text += "Mint, ";
             }
             if (Syrup)
             {
-                text += " - Syrup";
+                text += "Syrup, ";
             }
             if (Sugar_water)
             {
-                text += " - Sugar water";
+                text += "Sugar water, ";
             }
             if (Ice)
             {
-                text += " - Ice";
+                text += "Ice, ";
             }
             if (CustomIngredient.Count > 0)
             {
-                text += " - ";
                 text += string.Join(", ", CustomIngredient);
             }
-            text += " - " + Size + " - " + Price;
 
+            // remove last comma
+            if(text.EndsWith(", "))
+            {
+                text = text.Substring(0, text.Length - 2);
+            }
+
+            text += $" - {Size} - {Price:C}";
 
             return text;
         }
